@@ -1,0 +1,534 @@
+/* =========================
+   HERO
+========================= */
+.ecg-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.ecg-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.ecg-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.ecg-breadcrumb {
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: 500; 
+}
+.ecg-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ecg-breadcrumb a:hover,
+.ecg-breadcrumb a:visited,
+.ecg-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.ecg-bc-home { color: #000; cursor: pointer; }
+.ecg-bc-sep { margin: 0 8px; color: #888; }
+.ecg-bc-current { color: #6b7280; }
+
+/* =========================
+   SECTION + LAYOUT
+========================= */
+.ecg-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.ecg-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ecg-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.ecg-main { width: 100%; }
+
+.ecg-top {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.ecg-top-image img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.ecg-top-paras p, .ecg-title-inside{
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.ecg-top-para{
+    color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+/* =========================
+   FLEX BLOCKS (Text + Image)
+========================= */
+.ecg-flex-block {
+  display: grid;
+  grid-template-columns: 1fr 260px; /* text left, image right */
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.ecg-flex-block.reverse {
+  grid-template-columns: 260px 1fr; /* image left, text right */
+}
+
+.ecg-flex-text p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.ecg-flex-image img {
+  width: 300px;  
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Custom Diagnosis Block */
+.ecg-flex-block-diagnosis {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.ecg-flex-block-diagnosis .ecg-flex-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* =========================
+   BLOCK WRAPPERS & HEADINGS
+========================= */
+.ecg-block {
+  margin-bottom: 20px;
+}
+
+.ecg-subheading {
+  font-size: 28px;
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+/* Tick List */
+.ecg-tick-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.ecg-tick-list li {
+  position: relative;
+  padding-left: 32px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ecg-tick-list li::before {
+  content: "✔";
+  background: #393185;
+  color: #fff;
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.ecg-note {
+  margin-top: 14px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.ecg-sidebar { width: 100%; }
+
+.ecg-widget {
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+.ecg-widget-header {
+  background: #f5f5f5;
+  padding: 10px 12px;
+  margin: -16px -16px 12px -16px;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #1f2937;
+}
+
+/* Search */
+.ecg-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ecg-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.ecg-search-btn {
+  padding: 10px 12px;
+  background: #393185;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Services */
+.ecg-services-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ecg-services-list li {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.ecg-services-list li:hover {
+  color: #ce1e3b;
+}
+
+/* =========================
+   CONCLUSION BOX
+========================= */
+.ecg-conclusion-box {
+  background: #393185;
+  color: #fff;
+  padding: 22px;
+  border-radius: 4px;
+  margin-top: 32px;
+}
+
+.ecg-conclusion-box h4 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.ecg-conclusion-box p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Match list font */
+.ecg-top-paras {
+  padding-left: 18px;
+  margin: 0 0 16px 0;
+}
+
+.ecg-top-paras li {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1000px) {
+  .ecg-grid {
+    grid-template-columns: 1fr;
+  }
+  .ecg-flex-block,
+  .ecg-flex-block.reverse,
+  .ecg-flex-block-diagnosis {
+    grid-template-columns: 1fr;
+  }
+  .ecg-flex-image img {
+    width: 100%;
+  }
+}
+
+/* Medium screens: ≤600px */
+@media (max-width: 600px) {
+  .ecg-hero {
+    height: 250px;
+  }
+  .ecg-title {
+    font-size: 32px;
+  }
+  .ecg-breadcrumb {
+    font-size: 14px;
+  }
+  .ecg-hero-overlay {
+    padding: 20px 25px;
+  }
+
+  .ecg-container {
+    padding: 0 14px;
+  }
+
+  .ecg-flex-block,
+  .ecg-flex-block.reverse,
+  .ecg-flex-block-diagnosis {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .ecg-subheading {
+    font-size: 22px;
+  }
+
+  .ecg-top-paras p,
+  .ecg-top-paras li {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .ecg-tick-list li {
+    font-size: 15px;
+  }
+
+  .ecg-tick-list li::before {
+    min-width: 18px;
+    min-height: 18px;
+    font-size: 10px;
+  }
+
+  .ecg-conclusion-box h4 {
+    font-size: 26px;
+  }
+  .ecg-conclusion-box p {
+    font-size: 16px;
+  }
+
+  .ecg-search-input,
+  .ecg-search-btn {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .ecg-flex-block-diagnosis {
+    display: flex !important;
+    flex-direction: column;
+  }
+}
+
+/* Extra small: ≤480px */
+@media (max-width: 480px) {
+  .ecg-hero {
+    height: 200px;
+  }
+  .ecg-title {
+    font-size: 26px;
+  }
+  .ecg-breadcrumb {
+    font-size: 12px;
+  }
+
+  .ecg-subheading {
+    font-size: 20px;
+  }
+
+  .ecg-top-paras p,
+  .ecg-top-paras li {
+    font-size: 15px;
+  }
+
+  .ecg-conclusion-box h4 {
+    font-size: 24px;
+  }
+  .ecg-conclusion-box p {
+    font-size: 15px;
+  }
+
+  .ecg-tick-list li {
+    font-size: 14px;
+  }
+
+  .ecg-tick-list li::before {
+    min-width: 16px;
+    min-height: 16px;
+    font-size: 9px;
+  }
+}
+
+/* Mobile reverse fix */
+@media (max-width: 600px) {
+  .ecg-flex-block.reverse {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .ecg-flex-block.reverse .ecg-flex-text {
+    order: 1;
+  }
+  .ecg-flex-block.reverse .ecg-flex-image {
+    order: 2;
+    margin-top: 15px;
+  }
+}
+/* Make all ECG images same size */
+.ecg-flex-image img,
+.ecg-flex-block-diagnosis .ecg-flex-image img {
+  width: 100%;       /* fills container */
+  max-width: 300px;  /* same max width for all images */
+  height: 250px;     /* same height for all images */
+  object-fit: cover; /* preserves aspect ratio, crops if needed */
+  border-radius: 4px;
+}
+/* Tablet & mobile: images fill container but stay same height */
+@media (max-width: 1000px) {
+  .ecg-flex-image img,
+  .ecg-flex-block-diagnosis .ecg-flex-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 250px; /* keep uniform height */
+  }
+}
+
+@media (max-width: 600px) {
+  .ecg-flex-image img,
+  .ecg-flex-block-diagnosis .ecg-flex-image img {
+    width: 100%;
+    height: 200px; /* reduce height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .ecg-flex-image img,
+  .ecg-flex-block-diagnosis .ecg-flex-image img {
+    width: 100%;
+    height: 180px; /* further reduce for extra small screens */
+  }
+}
+
+/* Custom Diagnosis Block */
+.ecg-flex-block-diagnosis {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr; /* image left, text wider on right */
+  gap: 20px; /* smaller gap */
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.ecg-flex-block-diagnosis .ecg-flex-image img {
+  width: 100%;
+  max-width: 250px; /* smaller image so text has more space */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.ecg-flex-block-diagnosis .ecg-flex-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #6b7280;
+}
+/* ECG Procedure Block: text left, image right, image same as ECG3 */
+.ecg-flex-block-procedure {
+  display: grid;
+  grid-template-columns: 1fr 250px; /* text takes remaining, image same as ecg3 */
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.ecg-flex-block-procedure .ecg-flex-image img {
+  width: 100%;
+  max-width: 250px; /* same width as ecg3 image */
+  height: 150px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.ecg-block.benefits {
+  margin-bottom: 10px; /* reduce the gap */
+}
+/* MOBILE: Stack images below text and center only images */
+@media (max-width: 600px) {
+  /* Stack text above images */
+  .ecg-flex-block,
+  .ecg-flex-block.reverse,
+  .ecg-flex-block-diagnosis,
+  .ecg-flex-block-procedure {
+    display: flex !important;
+    flex-direction: column; /* stack text above image */
+    gap: 15px;
+  }
+
+  /* Ensure text comes first */
+  .ecg-flex-block.reverse .ecg-flex-text,
+  .ecg-flex-block-diagnosis .ecg-flex-text,
+  .ecg-flex-block-procedure .ecg-flex-text {
+    order: 1;
+  }
+
+  /* Images below text, centered */
+  .ecg-flex-block.reverse .ecg-flex-image,
+  .ecg-flex-block-diagnosis .ecg-flex-image,
+  .ecg-flex-block-procedure .ecg-flex-image,
+  .ecg-flex-block .ecg-flex-image {
+    order: 2;
+    margin: 0 auto; /* centers the image */
+  }
+}
+

@@ -1,0 +1,310 @@
+/* =========================
+   HERO
+========================= */
+.gyn-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.gyn-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.gyn-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.gyn-breadcrumb {
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: 500; 
+}
+.gyn-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.gyn-breadcrumb a:hover,
+.gyn-breadcrumb a:visited,
+.gyn-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.gyn-bc-home {
+  cursor: pointer;
+  color: #000;
+}
+
+.gyn-bc-sep {
+  margin: 0 8px;
+  color: #888;
+}
+
+.gyn-bc-current {
+  color: #6b7280;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.gyn-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.gyn-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.gyn-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.gyn-top {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.gyn-top-image img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.gyn-top-paras p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+.gyn-block {
+  margin-bottom: 30px;
+}
+
+.gyn-subheading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+/* Tick List */
+.gyn-tick-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gyn-tick-list li {
+  font-size: 16px;
+  color: #6b7280;
+  padding-left: 32px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.gyn-tick-list li::before {
+  content: "✔";
+  background: #393185;
+  color: #fff;
+  min-width: 22px;
+  min-height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+/* Diagnosis Image */
+.gyn-top-image.diagnosis img {
+  width: 300px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Treatment Grid */
+.gyn-treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+  margin-top: 20px;
+}
+
+.gyn-treatment-box {
+  padding: 10px 15px;
+}
+
+.gyn-treatment-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.gyn-treatment-box p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+/* Conclusion */
+.gyn-conclusion-box {
+  background: #393185;
+  color: #fff;
+  padding: 22px;
+  border-radius: 4px;
+}
+
+.gyn-conclusion-box h4 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.gyn-conclusion-box p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.gyn-sidebar {
+  width: 100%;
+}
+
+.gyn-widget {
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+/* Search */
+.gyn-search {
+  display: flex;
+  gap: 8px;
+}
+
+.gyn-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.gyn-search-btn {
+  background: #393185;
+  color: #fff;
+  padding: 10px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Services List */
+.gyn-widget-header {
+  background: #f5f5f5;
+  padding: 10px 12px;
+  margin: -16px -16px 12px -16px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.gyn-services-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gyn-services-list li {
+  font-size: 14px;
+  padding: 8px 10px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.gyn-services-list li:hover {
+  color: #ce1e3b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1000px) {
+  .gyn-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .gyn-treatment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gyn-top-image.diagnosis img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .gyn-hero { height: 250px; }
+
+  .gyn-title { font-size: 32px; }
+
+  .gyn-breadcrumb { font-size: 14px; }
+
+  .gyn-top-paras p,
+  .gyn-treatment-box p {
+    font-size: 16px;
+  }
+
+  .gyn-treatment-box h4 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gyn-title { font-size: 26px; }
+  .gyn-breadcrumb { font-size: 12px; }
+  .gyn-hero { height: 200px; }
+
+  .gyn-top-paras p {
+    font-size: 15px;
+  }
+
+  .gyn-subheading {
+    font-size: 20px;
+  }
+}

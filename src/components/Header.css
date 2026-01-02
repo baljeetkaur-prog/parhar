@@ -1,0 +1,791 @@
+.navbar {
+  background-color: #f2f6f6;
+  padding: 5px 30px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease, background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.65); /* translucent glass */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.navbar-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo img {
+  height: 70px;
+}
+
+/* Desktop Navigation */
+.nav-right-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  cursor: pointer;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.menu li:hover {
+  color: #393185;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-box,
+.appointment-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.phone-box {
+  background-color: #ffffff;
+  padding: 8px 12px;
+}
+
+.appointment-box {
+  background-color: #393185;
+  padding: 8px 12px;
+}
+
+.appointment-box .icon,
+.appointment-box span {
+  color: #fff;
+  font-size: 15px; 
+}
+
+/* Search dropdown */
+.search-icon {
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+
+.header-search-dropdown {
+  position: absolute;
+  top: 200%;
+  right: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 220px;
+  height: 38px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.header-search-dropdown input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  padding-right: 2px; 
+}
+
+.header_search-btn {
+  background-color: #393185;
+  border: none;
+  padding: 0 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* === MOBILE STYLES === */
+.hamburger {
+  display: none;
+  font-size: 22px;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+.mobile-search {
+  display: none;
+  position: relative;
+}
+
+/* Sidebar */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+  transition: left 0.3s ease;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 15px 20px;
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.mobile-menu-header .close-icon {
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.mobile-logo {
+  height: 50px;
+}
+.mobile-links-container {
+  flex: 1;               /* take available space */
+  overflow-y: auto;      /* scroll if too long */
+  background: #393185;   /* blue bg */
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.mobile-links li {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.2s;
+}
+
+
+.mobile-footer {
+  padding: 15px 20px 25px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #e5e5e5;
+}
+.mobile-footer .phone-box,
+.mobile-footer .appointment-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mobile-footer .phone-box {
+  background-color: #ffffff;
+  border: 1px solid #393185;
+  color: #393185;
+}
+
+.mobile-footer .appointment-box {
+  background-color: #393185;
+  color: #fff;
+}
+
+.mobile-footer .icon {
+  font-size: 18px;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE BEHAVIOR === */
+@media (max-width: 900px) {
+  .nav-right-wrapper {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-search {
+    display: block;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar-container {
+    position: relative;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 900px) {
+  .nav-right-wrapper {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-search {
+    display: block;
+  }
+
+  .navbar-container {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px; /* ✅ ensures vertical space */
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%; /* ✅ center vertically */
+    transform: translate(-50%, -50%);
+  }
+
+  .logo img {
+    height: 50px; /* ✅ slightly smaller for mobile */
+  }
+}
+/* === EXTRA SMALL SCREENS (max-width: 480px) === */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 4px 15px; /* smaller padding */
+  }
+
+  .hamburger {
+    font-size: 20px; /* slightly smaller icon */
+  }
+
+  .logo img {
+    height: 36px; /* smaller logo */
+  }
+
+  .mobile-links li {
+    font-size: 14px; /* smaller text */
+    padding: 10px 15px;
+  }
+
+  .mobile-footer .phone-box,
+  .mobile-footer .appointment-box {
+    padding: 8px;
+    font-size: 14px; /* smaller button text */
+  }
+
+  .header-search-dropdown {
+    width: 180px; /* smaller search dropdown */
+    height: 34px;
+  }
+
+  .header-search-dropdown input {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .search-btn {
+    padding: 0 8px;
+    font-size: 14px;
+  }
+
+  .navbar-container {
+    min-height: 55px; /* reduce height for small devices */
+  }
+
+  .mobile-menu {
+    width: 220px; /* narrower sidebar */
+  }
+
+  .mobile-menu-header {
+    padding: 10px 15px;
+  }
+
+  .mobile-footer {
+    padding: 10px 15px 20px;
+    gap: 8px;
+  }
+}
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu a li {
+  color: inherit;
+}
+.mobile-links a {
+  text-decoration: none;
+  color: inherit;
+}
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+/* ============================
+   SERVICES DROPDOWN
+============================ */
+
+.menu .dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+/* Rotate arrow on hover */
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown box */
+.dropdown-menu {
+  position: absolute;
+  top: 150%; /* goes BELOW navbar */
+  left: 0;
+  background: #ffffff;
+  border-radius: 4px;
+  width: 240px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  padding: 0px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: all 0.25s ease;
+  z-index: 2000;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  color: #393185;
+}
+/* Mobile dropdown header */
+.mobile-dropdown-header {
+  background: #393185;
+  padding: 12px 20px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mobile-dropdown-header .mobile-dropdown-icon {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* Submenu styling */
+.mobile-submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #393185; /* same blue as links container */
+  width: 100%;          /* full width of sidebar */
+  box-sizing: border-box;
+}
+
+
+.mobile-submenu li {
+  padding: 10px 25px;
+  font-size: 14px;
+  color: #333 !important;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+.mobile-submenu li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mobile-submenu li:hover {
+  color: #393185 !important;
+}
+.menu li,
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+}
+.desktop-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .desktop-search {
+    display: none;
+  }
+}
+.mobile-search .search-btn {
+  background-color: #393185;   /* same as desktop */
+  border: none;
+  height: 38px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 0px 6px 6px 0px; /* matches desktop rounded right side */
+}
+.mobile-search .header-search-dropdown input {
+  border: none;
+  height: 38px;
+  padding: 0 12px;
+  flex: 1;
+  outline: none;
+  font-size: 15px;
+  border-radius: 6px 0 0 6px; /* round left side like desktop */
+}
+/* FIX MOBILE SEARCH BUTTON */
+@media (max-width: 900px) {
+  .mobile-search .header-search-dropdown {
+    display: flex;
+    width: 250px;
+    overflow: visible !important;
+    height: auto;
+  }
+}
+/* Ensure all sidebar items fit without horizontal scroll */
+.mobile-links-container,
+.mobile-links,
+.mobile-links li,
+.mobile-submenu,
+.mobile-submenu li {
+  box-sizing: border-box; /* includes padding in width */
+  width: 100%;            /* full width of sidebar */
+}
+
+/* Mobile dropdown header */
+.mobile-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* make sure + stays inside */
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #393185;
+  color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Submenu */
+.mobile-submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #fff; /* different bg if you want */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mobile-submenu li {
+  padding: 12px 20px; /* same as main links */
+  font-size: 14px;
+  color: #333 !important;
+  border-bottom: 1px solid #eee;
+  width: 100%;  /* no extra width */
+  box-sizing: border-box;
+}
+
+/* Mobile menu flex setup */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 260px;
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+  transition: left 0.3s ease;
+  z-index: 1001;
+}
+
+/* Header stays on top */
+.mobile-menu-header {
+  flex: 0 0 auto; /* do not grow */
+}
+
+/* Links container takes remaining space, but footer stays visible */
+.mobile-links-container {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  background: #393185;
+}
+
+/* Footer stays fixed at bottom */
+.mobile-footer {
+  flex: 0 0 auto; /* do not grow, always visible */
+  padding: 15px 20px 25px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #e5e5e5;
+}
+.menu li a.active-link,
+.dropdown-menu a.active-link {
+  color: #393185; /* blue */
+  font-weight: 600;
+}
+/* Active link styling */
+.menu li a.active-link,
+.dropdown.active-link > .dropdown-btn {
+  color: #393185; /* blue */
+  font-weight: 600;
+}
+
+/* Dropdown hover still works */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.logo img {
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .logo img {
+    height: 60px;   /* Increased height */
+    width: auto;    /* Keep aspect ratio */
+  }
+}
+
+/* EXTRA SMALL SCREENS (max-width: 480px) */
+@media (max-width: 480px) {
+  .logo img {
+    height: 50px;   /* Increased for small screens */
+    width: auto;
+  }
+}
+/* ======================================== */
+/*             TOP BAR STYLING              */
+/* ======================================== */
+.topbar {
+  width: 100%;
+  background: #393185;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.topbar-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-left {
+  font-weight: 400;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-right .timing {
+  font-weight: 400;
+}
+
+.topbar-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-social a {
+  color: #fff;
+  font-size: 15px;
+  transition: 0.2s;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .topbar-container {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .topbar-right {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+.topbar-left,
+.timing {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topbar-icon {
+  font-size: 16px;
+  color: #fff; /* or your theme color */
+}
+@media (max-width: 768px) {
+  .topbar-right {
+    display: none;
+  }
+
+  .topbar-left {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.dropdown-menu.categories {
+  display: flex;
+  justify-content: space-between;  /* spreads columns evenly */
+  padding: 5px 30px;
+  padding-bottom: 20px; 
+  min-width: 700px;
+}
+
+.services-column {
+  flex: 1;                /* all columns take equal width */
+  min-width: 250px;           /* prevents overflow pushing items */
+}
+
+.services-column h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

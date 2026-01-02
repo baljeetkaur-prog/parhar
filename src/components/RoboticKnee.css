@@ -1,0 +1,1403 @@
+/* =========================
+   HERO
+   ========================= */
+.rk-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top;
+}
+
+.rk-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.rk-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #1f2937;
+}
+
+.rk-breadcrumb {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.rk-bc-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.rk-bc-sep {
+  margin: 0 8px;
+  color: #888;
+}
+
+.rk-bc-current {
+  color: #6b7280;
+}
+
+/* =========================
+   LAYOUT / CONTAINER
+   ========================= */
+.rk-section {
+  padding: 60px 0 60px;
+  background-color: #fff;
+}
+
+.rk-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.rk-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px; /* main + sidebar */
+  gap: 40px;
+  align-items: start;
+}
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+.rk-main {
+  width: 100%;
+}
+
+/* Top image + paragraphs */
+.rk-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.rk-top-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+/* paragraphs */
+.rk-top-paras p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+.rk-paras{
+    color: #6b7280;
+}
+
+/* Blocks (each section) */
+.rk-block {
+  margin-bottom: 32px;
+}
+
+/* Subheadings */
+.rk-subheading {
+  font-size: 28px;
+  margin-top:0; 
+  color: #1f2937;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+/* lists */
+.rk-list {
+  list-style-type: disc;
+  margin-left: 18px;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.rk-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* two-column rows inside main (image + text) */
+.rk-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: center;
+}
+
+.rk-two-left img,
+.rk-two-right img,
+.rk-navio-image img {
+  width: 55%;       /* reduce size */
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;   /* center the smaller image */
+}
+
+/* reverse layout for some sections */
+.rk-reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* mini titles */
+.rk-mini-title {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rk-two-col{
+      color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+/* CONCLUSION BOX */
+.rk-conclusion-box {
+  background: #393185;
+  color: #fff;
+  padding: 22px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.rk-conclusion-box h4 {
+  margin: 0 0 10px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+.rk-conclusion-box p {
+  line-height: 1.8;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+.rk-sidebar {
+  width: 100%;
+  position: relative;
+}
+
+/* widget base */
+.rk-widget {
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+/* Search */
+.rk-search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.rk-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  font-size: 14px;
+}
+
+.rk-search-btn {
+  padding: 10px 12px;
+  border: none;
+  background: #393185;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Enquiry form */
+.rk-enquiry .rk-widget-title,
+.rk-services .rk-widget-title {
+  font-size: 18px;
+  color: #1f2937;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.rk-enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rk-label {
+  font-size: 14px;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rk-input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+}
+
+.rk-submit-btn {
+  margin-top: 6px;
+  padding: 10px 14px;
+  background: #ce1e3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Services list */
+.rk-services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rk-services-list li {
+  padding: 8px 10px;
+  cursor: default;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 14px;
+}
+.rk-services-list li:hover{
+    cursor: pointer;
+    color: #ce1e3b; 
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1100px) {
+  .rk-grid {
+    grid-template-columns: 1fr 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .rk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rk-sidebar {
+    order: 2;
+  }
+
+  .rk-main {
+    order: 1;
+  }
+
+  .rk-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .rk-reverse {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* small screens tweaks for typography */
+@media (max-width: 600px) {
+  .rk-title {
+    font-size: 32px;
+  }
+
+  .rk-subheading {
+    font-size: 22px;
+  }
+
+  .rk-container {
+    padding: 0 14px;
+  }
+}
+/* ============================================
+   Special Layout: Image + Para1 side by side,
+   Para2 & Para3 full width below
+   ============================================ */
+.rk-special-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr; /* left image, right text */
+  grid-template-rows: auto;    /* remove extra auto row */
+  gap: 20px 30px;
+  align-items: start;
+  margin-bottom: 20px; /* reduce bottom spacing */
+}
+
+
+.rk-special-layout .rk-two-left {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.rk-special-layout .rk-two-left img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.rk-special-layout .rk-two-right {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Only first paragraph stays on right */
+.rk-special-layout .rk-two-right p:nth-of-type(1) {
+  margin-bottom: 15px;
+}
+
+/* Para 2 + Para 3 full width under image + para1 */
+.rk-special-layout .rk-two-right p:nth-of-type(n+2) {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: 0;
+  color: #6b7280;
+  line-height: 1.7;
+  font-size: 17px;
+}
+.rk-special-layout .rk-two-left img {
+  width: 60%;          /* smaller but still dominating left */
+  margin: 0 auto;
+  display: block;
+}
+/* Sidebar widget header bar */
+.rk-widget-header {
+  background: #f5f5f5;       /* light grey */
+  padding: 10px 12px;
+  margin: -16px -16px 12px -16px; /* pulls it to full width */
+  font-weight: 700;
+  font-size: 18px;
+  color: #1f2937;
+  text-align: center;
+}
+/* Tick list - clean layout */
+.rk-tick-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* each item text */
+.rk-tick-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* tick icon with its own round bg */
+.rk-tick-list li::before {
+  content: "✔";
+  background: #393185;
+   color: #fff !important; 
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 4px; /* optional */
+}
+
+/* =========================
+   MOBILE SCREENS (≤600px)
+   ========================= */
+@media (max-width: 600px) {
+
+  /* HERO SECTION */
+  .rk-hero {
+    height: 250px;
+  }
+
+  .rk-title {
+    font-size: 32px;
+  }
+
+  .rk-breadcrumb {
+    font-size: 14px;
+  }
+
+  .rk-hero-overlay {
+    padding: 20px 25px;
+  }
+
+  /* CONTAINER */
+  .rk-container {
+    padding: 0 14px;
+  }
+
+  /* GRID */
+  .rk-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* MAIN CONTENT */
+  .rk-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .rk-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .rk-special-layout {
+    grid-template-columns: 1fr; /* stack image + text */
+    gap: 15px;
+  }
+
+  .rk-special-layout .rk-two-left img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .rk-special-layout .rk-two-right p:nth-of-type(n+2) {
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .rk-subheading {
+    font-size: 22px;
+  }
+
+  .rk-mini-title {
+    font-size: 18px;
+  }
+
+  .rk-top-paras p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .rk-conclusion-box h4 {
+    font-size: 26px;
+  }
+
+  .rk-conclusion-box p {
+    font-size: 16px;
+  }
+
+  /* SIDEBAR */
+  .rk-sidebar {
+    order: 2;
+    width: 100%;
+  }
+
+  .rk-widget-header {
+    font-size: 16px;
+  }
+
+  .rk-tick-list li {
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .rk-tick-list li::before {
+    min-width: 18px;
+    min-height: 18px;
+    font-size: 10px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL SCREENS (≤480px)
+   ========================= */
+@media (max-width: 480px) {
+
+  /* HERO SECTION */
+  .rk-hero {
+    height: 200px;
+  }
+
+  .rk-title {
+    font-size: 26px;
+  }
+
+  .rk-breadcrumb {
+    font-size: 12px;
+  }
+
+  .rk-hero-overlay {
+    padding: 15px 18px;
+  }
+
+  /* MAIN CONTENT TYPOGRAPHY */
+  .rk-subheading {
+    font-size: 20px;
+  }
+
+  .rk-mini-title {
+    font-size: 16px;
+  }
+
+  .rk-top-paras p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .rk-conclusion-box h4 {
+    font-size: 24px;
+  }
+
+  .rk-conclusion-box p {
+    font-size: 15px;
+  }
+
+  /* SPECIAL LAYOUT IMAGE */
+  .rk-special-layout .rk-two-left img {
+    width: 100%;
+  }
+
+  .rk-special-layout .rk-two-right p:nth-of-type(n+2) {
+    font-size: 15px;
+  }
+
+  /* SIDEBAR */
+  .rk-widget-header {
+    font-size: 14px;
+  }
+
+  .rk-tick-list li {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .rk-tick-list li::before {
+    min-width: 16px;
+    min-height: 16px;
+    font-size: 9px;
+  }
+
+  /* FORM INPUTS */
+  .rk-input, .rk-search-input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .rk-submit-btn, .rk-search-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 600px) {
+  .rk-special-layout,
+  .rk-special-layout .rk-two-left,
+  .rk-special-layout .rk-two-left img {
+    display: block !important;
+    width: 100% !important;
+
+    height: auto !important;
+  }
+}
+@media (max-width: 600px) {
+  /* Make the special layout stack */
+  .rk-special-layout {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  /* Move the image after the paragraph */
+  .rk-special-layout .rk-two-left {
+    order: 2; /* image goes after text */
+    width: 100%;
+    margin-top: 15px; /* spacing above image */
+  }
+
+  .rk-special-layout .rk-two-right {
+    order: 1; /* text stays first */
+    width: 100%;
+  }
+
+  /* Make image slightly smaller than full width */
+  .rk-special-layout .rk-two-left img {
+    width: 80% !important;   /* smaller than full width */
+    margin: 0 auto;
+    height: auto !important;
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .rk-tick-list li::before {
+    background: #393185; /* same as desktop, or lighter if you want */
+    color: #fff !important; 
+  }
+}
+
+@media (max-width: 480px) {
+  .rk-tick-list li::before {
+    background: #393185;
+    color: #fff !important; 
+  }
+}
+/* FINAL FIX — reduce special layout image size ONLY in mobile */
+@media (max-width: 600px) {
+  .rk-special-layout .rk-two-left img {
+    width: 55% !important;   /* smaller */
+    height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .rk-special-layout .rk-two-left img {
+    width: 50% !important;   /* extra small for very small screens */
+    height: auto !important;
+  }
+}
+/* =========================
+   HERO
+   ========================= */
+.rk-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top;
+}
+
+.rk-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.rk-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #1f2937;
+}
+
+.rk-breadcrumb {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.rk-bc-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.rk-bc-sep {
+  margin: 0 8px;
+  color: #888;
+}
+
+.rk-bc-current {
+  color: #6b7280;
+}
+
+/* =========================
+   LAYOUT / CONTAINER
+   ========================= */
+.rk-section {
+  padding: 60px 0 60px;
+  background-color: #fff;
+}
+
+.rk-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.rk-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px; /* main + sidebar */
+  gap: 40px;
+  align-items: start;
+}
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+.rk-main {
+  width: 100%;
+}
+
+/* Top image + paragraphs */
+.rk-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.rk-top-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+/* paragraphs */
+.rk-top-paras p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+.rk-paras{
+    color: #6b7280;
+}
+
+/* Blocks (each section) */
+.rk-block {
+  margin-bottom: 32px;
+}
+
+/* Subheadings */
+.rk-subheading {
+  font-size: 28px;
+  margin-top:0; 
+  color: #1f2937;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+/* lists */
+.rk-list {
+  list-style-type: disc;
+  margin-left: 18px;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.rk-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* two-column rows inside main (image + text) */
+.rk-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: center;
+}
+
+.rk-two-left img,
+.rk-two-right img,
+.rk-navio-image img {
+  width: 55%;       /* reduce size */
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;   /* center the smaller image */
+}
+
+/* reverse layout for some sections */
+.rk-reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* mini titles */
+.rk-mini-title {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rk-two-col{
+      color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+/* CONCLUSION BOX */
+.rk-conclusion-box {
+  background: #393185;
+  color: #fff;
+  padding: 22px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.rk-conclusion-box h4 {
+  margin: 0 0 10px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+.rk-conclusion-box p {
+  line-height: 1.8;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+.rk-sidebar {
+  width: 100%;
+  position: relative;
+}
+
+/* widget base */
+.rk-widget {
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+/* Search */
+.rk-search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.rk-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  font-size: 14px;
+}
+
+.rk-search-btn {
+  padding: 10px 12px;
+  border: none;
+  background: #393185;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Enquiry form */
+.rk-enquiry .rk-widget-title,
+.rk-services .rk-widget-title {
+  font-size: 18px;
+  color: #1f2937;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.rk-enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rk-label {
+  font-size: 14px;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rk-input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+}
+
+.rk-submit-btn {
+  margin-top: 6px;
+  padding: 10px 14px;
+  background: #ce1e3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Services list */
+.rk-services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rk-services-list li {
+  padding: 8px 10px;
+  cursor: default;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 14px;
+}
+.rk-services-list li:hover{
+    cursor: pointer;
+    color: #ce1e3b; 
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1100px) {
+  .rk-grid {
+    grid-template-columns: 1fr 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .rk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rk-sidebar {
+    order: 2;
+  }
+
+  .rk-main {
+    order: 1;
+  }
+
+  .rk-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .rk-reverse {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* small screens tweaks for typography */
+@media (max-width: 600px) {
+  .rk-title {
+    font-size: 32px;
+  }
+
+  .rk-subheading {
+    font-size: 22px;
+  }
+
+  .rk-container {
+    padding: 0 14px;
+  }
+}
+/* ============================================
+   Special Layout: Image + Para1 side by side,
+   Para2 & Para3 full width below
+   ============================================ */
+.rk-special-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr; /* left image, right text */
+  grid-template-rows: auto;    /* remove extra auto row */
+  gap: 20px 30px;
+  align-items: start;
+  margin-bottom: 20px; /* reduce bottom spacing */
+}
+
+
+.rk-special-layout .rk-two-left {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.rk-special-layout .rk-two-left img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.rk-special-layout .rk-two-right {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Only first paragraph stays on right */
+.rk-special-layout .rk-two-right p:nth-of-type(1) {
+  margin-bottom: 15px;
+}
+
+/* Para 2 + Para 3 full width under image + para1 */
+.rk-special-layout .rk-two-right p:nth-of-type(n+2) {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: 0;
+  color: #6b7280;
+  line-height: 1.7;
+  font-size: 17px;
+}
+.rk-special-layout .rk-two-left img {
+  width: 60%;          /* smaller but still dominating left */
+  margin: 0 auto;
+  display: block;
+}
+/* Sidebar widget header bar */
+.rk-widget-header {
+  background: #f5f5f5;       /* light grey */
+  padding: 10px 12px;
+  margin: -16px -16px 12px -16px; /* pulls it to full width */
+  font-weight: 700;
+  font-size: 18px;
+  color: #1f2937;
+  text-align: center;
+}
+/* Tick list - clean layout */
+.rk-tick-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* each item text */
+.rk-tick-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* tick icon with its own round bg */
+.rk-tick-list li::before {
+  content: "✔";
+  background: #393185;
+   color: #fff !important; 
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 4px; /* optional */
+}
+
+/* =========================
+   MOBILE SCREENS (≤600px)
+   ========================= */
+@media (max-width: 600px) {
+
+  /* HERO SECTION */
+  .rk-hero {
+    height: 250px;
+  }
+
+  .rk-title {
+    font-size: 32px;
+  }
+
+  .rk-breadcrumb {
+    font-size: 14px;
+  }
+
+  .rk-hero-overlay {
+    padding: 20px 25px;
+  }
+
+  /* CONTAINER */
+  .rk-container {
+    padding: 0 14px;
+  }
+
+  /* GRID */
+  .rk-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* MAIN CONTENT */
+  .rk-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .rk-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .rk-special-layout {
+    grid-template-columns: 1fr; /* stack image + text */
+    gap: 15px;
+  }
+
+  .rk-special-layout .rk-two-left img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .rk-special-layout .rk-two-right p:nth-of-type(n+2) {
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .rk-subheading {
+    font-size: 22px;
+  }
+
+  .rk-mini-title {
+    font-size: 18px;
+  }
+
+  .rk-top-paras p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .rk-conclusion-box h4 {
+    font-size: 26px;
+  }
+
+  .rk-conclusion-box p {
+    font-size: 16px;
+  }
+
+  /* SIDEBAR */
+  .rk-sidebar {
+    order: 2;
+    width: 100%;
+  }
+
+  .rk-widget-header {
+    font-size: 16px;
+  }
+
+  .rk-tick-list li {
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .rk-tick-list li::before {
+    min-width: 18px;
+    min-height: 18px;
+    font-size: 10px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL SCREENS (≤480px)
+   ========================= */
+@media (max-width: 480px) {
+
+  /* HERO SECTION */
+  .rk-hero {
+    height: 200px;
+  }
+
+  .rk-title {
+    font-size: 26px;
+  }
+
+  .rk-breadcrumb {
+    font-size: 12px;
+  }
+
+  .rk-hero-overlay {
+    padding: 15px 18px;
+  }
+
+  /* MAIN CONTENT TYPOGRAPHY */
+  .rk-subheading {
+    font-size: 20px;
+  }
+
+  .rk-mini-title {
+    font-size: 16px;
+  }
+
+  .rk-top-paras p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .rk-conclusion-box h4 {
+    font-size: 24px;
+  }
+
+  .rk-conclusion-box p {
+    font-size: 15px;
+  }
+
+  /* SPECIAL LAYOUT IMAGE */
+  .rk-special-layout .rk-two-left img {
+    width: 100%;
+  }
+
+  .rk-special-layout .rk-two-right p:nth-of-type(n+2) {
+    font-size: 15px;
+  }
+
+  /* SIDEBAR */
+  .rk-widget-header {
+    font-size: 14px;
+  }
+
+  .rk-tick-list li {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .rk-tick-list li::before {
+    min-width: 16px;
+    min-height: 16px;
+    font-size: 9px;
+  }
+
+  /* FORM INPUTS */
+  .rk-input, .rk-search-input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .rk-submit-btn, .rk-search-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 600px) {
+  .rk-special-layout,
+  .rk-special-layout .rk-two-left,
+  .rk-special-layout .rk-two-left img {
+    display: block !important;
+    width: 100% !important;
+
+    height: auto !important;
+  }
+}
+@media (max-width: 600px) {
+  /* Make the special layout stack */
+  .rk-special-layout {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  /* Move the image after the paragraph */
+  .rk-special-layout .rk-two-left {
+    order: 2; /* image goes after text */
+    width: 100%;
+    margin-top: 15px; /* spacing above image */
+  }
+
+  .rk-special-layout .rk-two-right {
+    order: 1; /* text stays first */
+    width: 100%;
+  }
+
+  /* Make image slightly smaller than full width */
+  .rk-special-layout .rk-two-left img {
+    width: 80% !important;   /* smaller than full width */
+    margin: 0 auto;
+    height: auto !important;
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .rk-tick-list li::before {
+    background: #393185; /* same as desktop, or lighter if you want */
+    color: #fff !important; 
+  }
+}
+
+@media (max-width: 480px) {
+  .rk-tick-list li::before {
+    background: #393185;
+    color: #fff !important; 
+  }
+}
+/* FINAL FIX — reduce special layout image size ONLY in mobile */
+@media (max-width: 600px) {
+  .rk-special-layout .rk-two-left img {
+    width: 55% !important;   /* smaller */
+    height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .rk-special-layout .rk-two-left img {
+    width: 50% !important;   /* extra small for very small screens */
+    height: auto !important;
+  }
+}
+.rk-services-list li a {
+  color: inherit;        /* use the li color */
+  text-decoration: none; /* remove underline */
+  display: block;        /* ensures full clickable area */
+  font-weight: 600;      /* match li font weight */
+  font-size: 14px;       /* match li font size */
+}
+
+/* Hover effect: keep same as li hover */
+.rk-services-list li a:hover {
+  color: #ce1e3b;       /* red on hover */
+  text-decoration: none; /* no underline */
+}
+.rk-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.rk-breadcrumb a:hover,
+.rk-breadcrumb a:visited,
+.rk-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

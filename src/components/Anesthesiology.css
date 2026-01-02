@@ -1,0 +1,481 @@
+/* =========================
+   HERO
+   ========================= */
+.anes-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.anes-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.anes-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.anes-breadcrumb {
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: 500; 
+}
+.anes-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.anes-breadcrumb a:hover,
+.anes-breadcrumb a:visited,
+.anes-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.anes-bc-home { color: #000; cursor: pointer; }
+.anes-bc-sep { margin: 0 8px; color: #888; }
+.anes-bc-current { color: #6b7280; }
+
+/* =========================
+   LAYOUT
+   ========================= */
+.anes-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.anes-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.anes-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+}
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+.anes-main { width: 100%; }
+
+.anes-top {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.anes-top-image img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.anes-top-paras p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Blocks */
+.anes-block {
+  margin-bottom: 32px;
+}
+
+.anes-subheading {
+  font-size: 28px;
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Lists */
+.anes-list {
+  margin-left: 18px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.anes-list li {
+  margin-bottom: 10px;
+}
+
+/* Conclusion */
+.anes-conclusion-box {
+  background: #393185;
+  color: #fff;
+  padding: 22px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.anes-conclusion-box h4 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.anes-conclusion-box p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+.anes-sidebar { width: 100%; }
+
+.anes-widget {
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+/* Search */
+.anes-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.anes-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.anes-search-btn {
+  padding: 10px 12px;
+  background: #393185;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Enquiry */
+.anes-widget-header {
+  background: #f5f5f5;
+  padding: 10px 12px;
+  margin: -16px -16px 12px -16px;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.anes-enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.anes-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.anes-input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.anes-submit-btn {
+  padding: 10px;
+  background: #ce1e3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Services */
+.anes-services-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.anes-services-list li {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.anes-services-list li:hover {
+  color: #ce1e3b;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1000px) {
+  .anes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Tick List Styling ===== */
+.anes-tick-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.anes-tick-list li {
+  display: block;
+  align-items: flex-start;
+  gap: 10px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 32px;
+  position: relative;
+}
+
+.anes-tick-list li::before {
+  content: "✔";
+  background: #393185;
+  color: #fff;
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 4px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.anes-search-input:focus,
+.anes-input:focus,
+.anes-search-btn:focus,
+.anes-submit-btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #e5e7eb !important;
+}
+
+/* =========================
+   RESPONSIVE: Medium (≤1100px)
+   ========================= */
+@media (max-width: 1100px) {
+  .anes-grid {
+    grid-template-columns: 1fr 320px;
+  }
+}
+
+/* =========================
+   Responsive: Tablets (≤900px)
+   ========================= */
+@media (max-width: 900px) {
+  .anes-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .anes-sidebar {
+    order: 2;
+    width: 100%;
+  }
+
+  .anes-main {
+    order: 1;
+  }
+
+  .anes-two-col,
+  .anes-reverse {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Mobile (≤600px)
+   ========================= */
+@media (max-width: 600px) {
+  .anes-hero {
+    height: 250px;
+  }
+
+  .anes-title {
+    font-size: 32px;
+  }
+
+  .anes-breadcrumb {
+    font-size: 14px;
+  }
+
+  .anes-hero-overlay {
+    padding: 20px 25px;
+  }
+
+  .anes-container {
+    padding: 0 14px;
+  }
+
+  .anes-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .anes-subheading {
+    font-size: 22px;
+  }
+
+  .anes-top-paras p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .anes-conclusion-box h4 {
+    font-size: 26px;
+  }
+
+  .anes-conclusion-box p {
+    font-size: 16px;
+  }
+
+  .anes-mini-title {
+    font-size: 18px;
+  }
+
+  .anes-widget-header {
+    font-size: 16px;
+  }
+
+  .anes-tick-list li {
+    font-size: 15px;
+  }
+
+  .anes-tick-list li::before {
+    min-width: 18px;
+    min-height: 18px;
+    font-size: 10px;
+  }
+
+  .anes-input,
+  .anes-search-input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .anes-submit-btn,
+  .anes-search-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   Extra small (≤480px)
+   ========================= */
+@media (max-width: 480px) {
+  .anes-hero {
+    height: 200px;
+  }
+
+  .anes-title {
+    font-size: 26px;
+  }
+
+  .anes-breadcrumb {
+    font-size: 12px;
+  }
+
+  .anes-hero-overlay {
+    padding: 15px 18px;
+  }
+
+  .anes-subheading {
+    font-size: 20px;
+  }
+
+  .anes-mini-title {
+    font-size: 16px;
+  }
+
+  .anes-top-paras p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .anes-conclusion-box h4 {
+    font-size: 24px;
+  }
+
+  .anes-conclusion-box p {
+    font-size: 15px;
+  }
+
+  .anes-tick-list li {
+    font-size: 14px;
+  }
+
+  .anes-tick-list li::before {
+    min-width: 16px;
+    min-height: 16px;
+    font-size: 9px;
+  }
+}
+
+/* =========================
+   Special layout stacking (mobile)
+   ========================= */
+@media (max-width: 600px) {
+  .anes-special-layout,
+  .anes-special-layout .anes-two-left,
+  .anes-special-layout .anes-two-left img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .anes-special-layout {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .anes-special-layout .anes-two-left {
+    order: 2;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .anes-special-layout .anes-two-right {
+    order: 1;
+    width: 100%;
+  }
+
+  .anes-special-layout .anes-two-left img {
+    width: 80% !important;
+    margin: 0 auto;
+    height: auto !important;
+    display: block;
+  }
+}

@@ -1,0 +1,262 @@
+.media-section {
+  background-color: #ffffff;
+  padding: 50px 20px;
+  overflow: hidden;
+  margin-top: 70px; 
+}
+.mediapresence-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  font-size: 35px;
+  color: #1F2937;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.mediapresence-heading .heading-icon {
+  color: #ce1e3b;
+  font-size: 34px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  top: 2px; /* baseline aligned */
+}
+
+.media-container {
+  max-width: 1300px;
+  margin:0 auto;
+  text-align: center;
+}
+.media-container h1{
+  padding-bottom: 20px; 
+}
+
+/* --- SCROLLING WRAPPER --- */
+.scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 30px;
+  animation: scrollCards 18s linear infinite;
+}
+
+/* --- CARD STYLING --- */
+.media-card {
+  border: 2px solid transparent;
+  border-image-slice: 1;
+  border-radius: 10px;
+  padding: 20px 30px;
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon + name */
+.media-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 28px;
+}
+
+.media-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Icons */
+.icon.insta {
+  color: #e4405f;
+}
+
+.icon.fb {
+  color: #1877f2;
+}
+
+.icon.yt {
+  color: #ff0000;
+}
+
+/* Button */
+.view-btn {
+  background: var(--btn-bg, #393185);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- SMOOTH SCROLL ANIMATION --- */
+@keyframes scrollCards {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scroll-track {
+    animation: scrollCards 25s linear infinite;
+  }
+
+  .media-card {
+    width: 300px;
+    padding: 20px 25px;
+  }
+}
+.media-icon-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.media-icon-img:hover {
+  transform: scale(1.15);
+}
+/* Pause scroll on hover */
+.scroll-wrapper:hover .scroll-track {
+  animation-play-state: paused;
+}
+@media (max-width: 768px) {
+  .mediapresence-heading {
+    font-size: 26px;
+    gap: 8px;
+    text-align: left;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+
+  .mediapresence-heading .heading-icon {
+    font-size: 26px;
+    top: 1px;
+  }
+   .scroll-track {
+    animation: scrollCards 25s linear infinite;
+  }
+
+  /* Card size smaller */
+  .media-card {
+    width: 260px;      /* reduce width */
+    padding: 15px 20px; /* reduce padding */
+    flex-direction: row;
+  }
+
+  /* Icon + text spacing */
+  .media-info {
+    gap: 6px;
+  }
+
+  /* Media name smaller, prevent wrapping */
+  .media-name {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  /* Icon image smaller */
+  .media-icon-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Button smaller */
+  .view-btn {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+}
+/* === Extra Small Screens (max-width: 480px) === */
+@media (max-width: 480px) {
+  .mediapresence-heading {
+    font-size: 20px;
+    gap: 6px;
+    text-align: left;
+    margin-top: 90px;
+    margin-bottom: 30px;
+  }
+
+  .mediapresence-heading .heading-icon {
+    font-size: 20px;
+    top: 0;
+  }
+
+  /* Adjust scroll track speed if needed */
+  .scroll-track {
+    animation: scrollCards 30s linear infinite; /* slower for smaller screens */
+  }
+
+  /* Media cards smaller */
+  .media-card {
+    width: 200px;       /* fit 1 card comfortably per slide */
+    padding: 12px 15px; /* reduce padding */
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .media-info {
+    gap: 5px;
+  }
+
+  .media-name {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .media-icon-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .view-btn {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  /* Ensure horizontal scroll works smoothly */
+  .scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
+.mediapresence-heading{
+  font-weight: bold; 
+}
+
+
+
+
+

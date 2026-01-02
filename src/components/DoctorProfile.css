@@ -1,0 +1,378 @@
+/* HERO */
+.drprofile-hero {
+  position: relative;
+  width: 100%;
+  height: 300px; /* slightly smaller */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.drprofile-hero-overlay {
+  text-align: center;
+  color: #000;
+  padding: 30px 40px; /* reduced */
+}
+
+.drprofile-hero-title {
+  font-size: 40px; /* reduced */
+  font-weight: 700;
+  margin: 0;
+  color: #1f2937;
+}
+
+.drprofile-hero-breadcrumb {
+  margin-top: 6px; /* reduced */
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.drprofile-breadcrumb-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.drprofile-breadcrumb-separator {
+  margin: 0 4px; /* reduced */
+  color: #888;
+}
+
+.drprofile-breadcrumb-current {
+  color: #888;
+}
+
+/* MAIN GRID */
+.drprofile-section {
+  padding: 40px 20px; /* reduced from 60px */
+}
+
+.drprofile-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.drprofile-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 40px; /* horizontal gap */
+  row-gap: 20px;    /* vertical gap reduced */
+  align-items: start;
+}
+
+/* LEFT SIDE */
+.drprofile-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* reduced from 20px */
+}
+
+.drprofile-small-heading {
+  color: #393185;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom:0; 
+}
+
+.drprofile-main-heading {
+  color: #333;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top:0; 
+  margin-bottom:0; 
+}
+
+.drprofile-para {
+  color: #6B7280;
+  font-size: 16px;
+  text-align: justify;
+  margin: 0; /* remove extra margins */
+}
+
+.drprofile-images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px; /* reduced */
+  margin-top: 15px;
+}
+
+.drprofile-imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.drprofile-exp-card {
+  background-color: #393185;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  margin-top: 15px; /* spacing from content */
+}
+
+.drprofile-exp-card h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.drprofile-exp-card p {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+/* RIGHT SIDE (Services + Enquiry) */
+.drprofile-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* reduced */
+}
+
+.drprofile-widget-header {
+  font-size: 18px; /* reduced */
+  font-weight: 600;
+  margin-bottom: 8px; /* reduced */
+}
+
+.drprofile-services-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.drprofile-services-list li {
+  margin-bottom: 6px; /* reduced */
+}
+
+.drprofile-services-list li a {
+  text-decoration: none;
+  color: #393185;
+  font-weight: 500;
+}
+
+.drprofile-enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* reduced */
+}
+
+.drprofile-label {
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.drprofile-input {
+  padding: 7px 10px; /* slightly smaller */
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+}
+
+.drprofile-submit-btn {
+  background-color: #ce1e3b;
+  color: #fff;
+  padding: 8px 16px; /* reduced */
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.drprofile-submit-btn:hover {
+  background-color: #fff;
+  color: #ce1e3b;
+}
+
+/* Tick List for Left Content */
+.drprofile-tick-list {
+  list-style: none;
+  margin: 12px 0; /* reduced */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* reduced */
+}
+
+.drprofile-tick-list li {
+  position: relative;
+  padding-left: 28px; /* smaller space for tick */
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.drprofile-tick-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: #393185;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .drprofile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .drprofile-right {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .drprofile-hero {
+    height: 220px;
+  }
+
+  .drprofile-hero-overlay {
+    padding: 15px 20px;
+  }
+
+  .drprofile-hero-title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 900px) {
+  .drprofile-para {
+    text-align: left; /* instead of justify */
+  }
+}
+/* =========================
+   MOBILE HERO FIX
+   ========================= */
+@media (max-width: 900px) {
+  .drprofile-hero {
+    height: 250px;
+    background-position: top;
+  }
+
+  .drprofile-hero-overlay {
+    padding: 20px 25px;
+    text-align: center;
+  }
+
+  .drprofile-hero-title {
+    font-size: 32px;
+  }
+
+  .drprofile-hero-breadcrumb {
+    font-size: 14px;
+  }
+
+  .drprofile-para {
+    text-align: left; /* fix excessive word spacing */
+    line-height: 1.6;
+  }
+
+  .drprofile-left {
+    gap: 8px;
+  }
+
+  .drprofile-tick-list {
+    gap: 6px;
+  }
+
+  .drprofile-tick-list li {
+    font-size: 15px;
+    padding-left: 28px;
+  }
+
+  .drprofile-tick-list li::before {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    top: 3px;
+  }
+
+  .drprofile-exp-card h2 {
+    font-size: 20px;
+  }
+
+  .drprofile-exp-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .drprofile-hero {
+    height: 200px;
+  }
+
+  .drprofile-hero-overlay {
+    padding: 15px 18px;
+  }
+
+  .drprofile-hero-title {
+    font-size: 26px;
+  }
+
+  .drprofile-hero-breadcrumb {
+    font-size: 12px;
+  }
+
+  .drprofile-para {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .drprofile-tick-list li {
+    font-size: 14px;
+    padding-left: 24px;
+  }
+
+  .drprofile-tick-list li::before {
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    top: 2px;
+  }
+}
+
+/* =====================================
+   DR PROFILE — MOBILE SPACING FIX
+   (MATCH RK-CONTAINER EXACTLY)
+   ===================================== */
+@media (max-width: 600px) {
+
+  /* Section should NOT add side space */
+  .drprofile-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* ONLY container controls spacing */
+  .drprofile-container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  /* Grid must not add spacing */
+  .drprofile-grid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.drprofile-hero-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+.drprofile-hero-breadcrumb a:hover,
+.drprofile-hero-breadcrumb a:visited,
+.drprofile-hero-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,263 @@
+.service-highlight {
+  background-color: #fff;
+  padding: 40px 20px;
+  margin-top:60px; 
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card:hover{
+  cursor: pointer;
+}
+
+.card-primary {
+  background-color: #393185;
+  color: #fff;
+}
+
+.card-center {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 30px;
+  font-weight: 700; 
+  margin-bottom: 10px;
+  margin-top:0; 
+}
+
+.card p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.center-text {
+  color: #777;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-primary button {
+  background-color: #ce1e3b;
+  color: #fff;
+  font-weight: 600; 
+}
+
+.card-center button {
+  background-color: #393185;
+  color: #fff;
+  font-weight: 600; 
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1000px) {
+  .cards-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .card-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}
+.card-primary:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card-primary:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* ===== Responsive: Tablet and Mobile ===== */
+@media (max-width: 1000px) {
+  .cards-container {
+    flex-direction: column;
+    gap: 20px; /* space between stacked cards */
+    padding: 0 20px; /* horizontal padding for equal space */
+  }
+
+  .card {
+    width: 100%;
+    box-sizing: border-box; /* ensures padding doesn't overflow */
+    margin-bottom: 20px;
+    border-radius: 10px; /* rounded corners in stacked view */
+  }
+
+  .card:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ===== Responsive: Mobile ===== */
+@media (max-width: 768px) {
+  .cards-container {
+    padding: 0 15px; /* slightly smaller horizontal padding for smaller screens */
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .card-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
+/* ===== Responsive: Extra Small Screens ===== */
+@media (max-width: 480px) {
+  .cards-container {
+    padding: 0 10px; /* smallest screens get smaller padding */
+    gap: 15px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .card-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+
+  /* Border radius for stacked cards */
+  .card-primary:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card-primary:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .card-center {
+    border-radius: 0; 
+  }
+}
+/* ===== Button Hover / Active Effects ===== */
+.card-primary button:hover,
+.card-primary button:active {
+  background-color: #fff;
+  color: #ce1e3b;
+}
+
+.card-center button:hover,
+.card-center button:active {
+  background-color: #000;
+  color: #fff;
+}
+.card-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.card-icon svg {
+  width: 85%;   /* reduces oversized look */
+  height: 85%;
+  color: inherit;
+}
+.service-highlight-heading{
+  font-size: 30px; 
+  font-weight: 700; 
+}
+/* 📱 Tablets */
+@media (max-width: 1024px) {
+  .service-highlight-heading {
+    font-size: 26px;
+  }
+}
+
+/* 📱 Mobile devices */
+@media (max-width: 768px) {
+  .service-highlight-heading {
+    font-size: 22px;
+  }
+}
+
+/* 📱 Small mobiles */
+@media (max-width: 480px) {
+  .service-highlight-heading {
+    font-size: 20px;
+  }
+}

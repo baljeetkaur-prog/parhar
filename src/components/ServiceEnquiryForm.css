@@ -1,0 +1,101 @@
+/* Widget base */
+.sef-widget {
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+/* Widget header */
+.sef-widget-header {
+  background: #f5f5f5;
+  padding: 10px 12px;
+  margin: -16px -16px 12px -16px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1f2937;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Form */
+.sef-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Labels */
+.sef-label {
+  font-size: 14px;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Inputs */
+.sef-input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Submit button */
+.sef-submit-btn {
+  margin-top: 6px;
+  padding: 10px 14px;
+  background: #ce1e3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.sef-submit-btn:hover {
+  background: #a81a31;
+}
+
+/* Success & error messages */
+.sef-success {
+  color: green;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.sef-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .sef-widget {
+    padding: 12px;
+  }
+
+  .sef-widget-header {
+    font-size: 16px;
+  }
+
+  .sef-label {
+    font-size: 13px;
+  }
+
+  .sef-input {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .sef-submit-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .sef-success, .sef-error {
+    font-size: 13px;
+  }
+}

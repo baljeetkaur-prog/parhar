@@ -1,0 +1,139 @@
+.notfound-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 70px; 
+}
+
+.notfound-img {
+  width: 450px;
+  max-width: 90%;
+  margin-bottom: 10px;
+}
+
+.notfound-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.notfound-text {
+  font-size: 18px;
+  color: #6B7280;
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+.notfound-btns {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.notfound-btn {
+  padding: 10px 20px;
+  background-color: #393185;
+  border: 1px solid transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 600; 
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.notfound-btn:hover {
+  background-color: #fff;
+  color: #393185;
+  border: 1px solid #393185;
+}
+
+.home-btn {
+  background-color: #ce1e3b;
+}
+
+.home-btn:hover {
+  background-color: #fff;
+  color: #ce1e3b;
+  border: 1px solid #ce1e3b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .notfound-title {
+    font-size: 28px;
+  }
+  .notfound-text {
+    font-size: 16px;
+  }
+  .notfound-img {
+    width: 260px;
+  }
+
+  /* Buttons responsive */
+  .notfound-btns {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .notfound-btn,
+  .home-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 15px;
+  }
+}
+
+/* iPhone SE / very small devices */
+@media (max-width: 360px) {
+  .notfound-btn,
+  .home-btn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .notfound-title {
+    font-size: 28px;
+  }
+  .notfound-text {
+    font-size: 16px;
+  }
+  .notfound-img {
+    width: 260px;
+  }
+
+  /* Buttons responsive */
+  .notfound-btns {
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;   /* Keeps buttons centered */
+  }
+
+  .notfound-btn,
+  .home-btn {
+    width: auto;          /* ❗ not full width */
+    padding: 10px 22px;   /* normal sizing */
+    font-size: 15px;
+  }
+}
+
+/* iPhone SE / very small devices */
+@media (max-width: 360px) {
+  .notfound-btn,
+  .home-btn {
+    font-size: 14px;
+    padding: 9px 20px;    /* slightly smaller */
+  }
+}
+

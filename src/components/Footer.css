@@ -1,0 +1,218 @@
+.footer {
+  background-color: #F2F6F6;
+  padding: 60px 30px 20px;
+  box-sizing: border-box;
+  color: #1F2937;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout */
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+/* Logo + About */
+.footer-logo {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-about {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Headings */
+.footer-heading {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Lists */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-links li:hover {
+  color: #393185;
+}
+
+/* Contact Section */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start; /* aligns icons neatly with multi-line text */
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 18px; /* increased spacing */
+  line-height: 1.6; /* improves readability */
+}
+
+
+.contact-icon {
+  color: #777;
+  margin-right: 12px;
+  font-size: 16px;
+  flex-shrink: 0; /* prevents icon from shrinking */
+  margin-top: 3px; /* aligns with multiline text */
+}
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  font-size: 18px;
+  color: grey;
+  margin-bottom: 15px;
+}
+
+.footer-social svg:hover {
+  color: #393185;
+  cursor: pointer;
+}
+
+/* Search bar */
+.footer-search {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 220px;
+  height: 38px; 
+}
+
+.footer-search input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 8px 8px;
+  padding-right: 3px; 
+  font-size: 14px;
+  height: 100%; /* match height */
+}
+.search-btn {
+  background-color: #393185;
+  border: none;
+  padding: 0 12px; /* even horizontal padding */
+  height: 100%; /* ensure icon stays visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+/* Divider */
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px auto 15px;
+  max-width: 1300px;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-bottom-links span {
+  cursor: pointer;
+  color: #393185;
+  font-weight: 500;
+}
+
+.footer-bottom-links span:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-search {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  /* Reduce gap between footer columns */
+  .footer-container {
+    gap: 10px; /* reduced from 30px */
+  }
+
+  /* Footer search input full width */
+  .footer-search {
+    max-width: 100%;
+  }
+
+  /* Bottom bar adjustments */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 5px; /* reduced from 10px */
+    text-align: center;
+  }
+
+  /* Center copyright */
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  /* Remove FAQ and Gallery links */
+  .footer-bottom-links {
+    display: none;
+  }
+}
+.footer-links a,
+.footer-social a,
+.footer-bottom a {
+  text-decoration: none !important;
+}
+
+.footer-links a:hover li {
+  color: #393185;
+}
+/* Social icons default color */
+.footer-social a svg {
+  color: grey !important;
+}
+
+/* Hover effect */
+.footer-social a:hover svg {
+  color: #393185 !important;
+}
+
+
+
+

@@ -1,0 +1,597 @@
+/* =========================
+   HERO
+   ========================= */
+.pa-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;            /* same as robotic */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top;
+}
+
+.pa-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;       /* same as robotic */
+}
+
+.pa-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #1f2937;
+}
+
+.pa-breadcrumb {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.pa-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pa-breadcrumb a:hover,
+.pa-breadcrumb a:visited,
+.pa-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pa-bc-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.pa-bc-sep {
+  margin: 0 8px;
+  color: #888;
+}
+
+.pa-bc-current {
+  color: #6b7280;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 600px) {
+  .pa-hero {
+    height: 250px;
+  }
+
+  .pa-title {
+    font-size: 32px;
+  }
+
+  .pa-breadcrumb {
+    font-size: 14px;
+  }
+
+  .pa-hero-overlay {
+    padding: 20px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pa-hero {
+    height: 200px;
+  }
+
+  .pa-title {
+    font-size: 26px;
+  }
+
+  .pa-breadcrumb {
+    font-size: 12px;
+  }
+
+  .pa-hero-overlay {
+    padding: 15px 18px;
+  }
+}
+
+
+/* =========================
+   LAYOUT / CONTAINER
+   ========================= */
+.pa-section {
+  padding: 60px 0 60px;
+  background-color: #fff;
+}
+
+.pa-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pa-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px; /* main + sidebar */
+  gap: 40px;
+  align-items: start;
+}
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+.pa-main {
+  width: 100%;
+}
+
+/* Top image + paragraphs */
+.pa-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.pa-top-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+/* paragraphs */
+.pa-top-paras p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+/* Blocks (each section) */
+.pa-block {
+  margin-bottom: 32px;
+}
+
+/* Subheadings */
+.pa-subheading {
+  font-size: 28px;
+  margin-top:0; 
+  color: #1f2937;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+/* lists */
+.pa-list {
+  list-style-type: disc;
+  margin-left: 18px;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.pa-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* two-column rows inside main (image + text) */
+.pa-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: center;
+}
+
+.pa-two-left img,
+.pa-two-right img,
+.pa-navio-image img {
+  width: 55%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* reverse layout for some sections */
+.pa-reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* mini titles */
+.pa-mini-title {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.pa-two-col {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+/* CONCLUSION BOX */
+.pa-conclusion-box {
+  background: #393185;
+  color: #fff;
+  padding: 22px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.pa-conclusion-box h4 {
+  margin: 0 0 10px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.pa-conclusion-box p {
+  line-height: 1.8;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+.pa-sidebar {
+  width: 100%;
+  position: relative;
+}
+
+/* widget base */
+.pa-widget {
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+/* Search */
+.pa-search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pa-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  font-size: 14px;
+}
+
+.pa-search-btn {
+  padding: 10px 12px;
+  border: none;
+  background: #393185;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Enquiry form */
+.pa-enquiry .pa-widget-title,
+.pa-services .pa-widget-title {
+  font-size: 18px;
+  color: #1f2937;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.pa-enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pa-label {
+  font-size: 14px;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pa-input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+}
+
+.pa-submit-btn {
+  margin-top: 6px;
+  padding: 10px 14px;
+  background: #ce1e3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Services list */
+.pa-services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pa-services-list li {
+  padding: 8px 10px;
+  cursor: default;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.pa-services-list li:hover {
+  cursor: pointer;
+  color: #ce1e3b;
+}
+
+/* Sidebar widget header bar */
+.pa-widget-header {
+  background: #f5f5f5;
+  padding: 10px 12px;
+  margin: -16px -16px 12px -16px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* Tick list */
+.pa-tick-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pa-tick-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.pa-tick-list li::before {
+  content: "✔";
+  background: #393185;
+  color: #fff !important; 
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1100px) {
+  .pa-grid {
+    grid-template-columns: 1fr 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pa-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-sidebar {
+    order: 2;
+  }
+
+  .pa-main {
+    order: 1;
+  }
+
+  .pa-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-reverse {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* small screens tweaks for typography */
+@media (max-width: 600px) {
+  .pa-title {
+    font-size: 32px;
+  }
+
+  .pa-subheading {
+    font-size: 22px;
+  }
+
+  .pa-container {
+    padding: 0 14px;
+  }
+
+  .pa-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-special-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-special-layout .pa-two-left img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .pa-special-layout .pa-two-right p:nth-of-type(n+2) {
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .pa-mini-title {
+    font-size: 18px;
+  }
+
+  .pa-top-paras p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .pa-conclusion-box h4 {
+    font-size: 26px;
+  }
+
+  .pa-conclusion-box p {
+    font-size: 16px;
+  }
+
+  .pa-sidebar {
+    width: 100%;
+    order: 2;
+  }
+
+  .pa-widget-header {
+    font-size: 16px;
+  }
+
+  .pa-tick-list li {
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .pa-tick-list li::before {
+    min-width: 18px;
+    min-height: 18px;
+    font-size: 10px;
+  }
+
+  .pa-input,
+  .pa-search-input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .pa-submit-btn,
+  .pa-search-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pa-title {
+    font-size: 26px;
+  }
+
+  .pa-breadcrumb {
+    font-size: 12px;
+  }
+
+  .pa-hero-overlay {
+    padding: 15px 18px;
+  }
+
+  .pa-subheading {
+    font-size: 20px;
+  }
+
+  .pa-mini-title {
+    font-size: 16px;
+  }
+
+  .pa-top-paras p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .pa-conclusion-box h4 {
+    font-size: 24px;
+  }
+
+  .pa-conclusion-box p {
+    font-size: 15px;
+  }
+
+  .pa-tick-list li::before {
+    min-width: 16px;
+    min-height: 16px;
+    font-size: 9px;
+  }
+
+  .pa-input,
+  .pa-search-input {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .pa-submit-btn,
+  .pa-search-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+.pa-mini-title {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+/* Increase size for pae1.jpeg and pae2.jpg */
+.pa-two-right img,
+.pa-image-left img {
+  width: 80% !important;   /* Increase from 55% to 80% */
+  max-width: 450px;
+  border-radius: 4px; 
+}
+
+/* --- MOBILE: Move pae2.jpg image BELOW the text --- */
+@media (max-width: 900px) {
+  .pa-special-layout {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .pa-special-layout .pa-text-right {
+    order: 1;
+  }
+
+  .pa-special-layout .pa-image-left {
+    order: 2;
+  }
+
+  /* Make the image full width on mobile */
+  .pa-special-layout .pa-image-left img {
+    width: 100% !important;
+    max-width: 400px;
+    margin: 12px auto 0;
+    display: block;
+  }
+}
+/* Fix: Make pae2.jpg align to the left on desktop */
+.pa-image-left img {
+  margin: 0 !important;     /* remove auto-centering */
+  display: block;
+}
+

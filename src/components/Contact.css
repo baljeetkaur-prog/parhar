@@ -1,0 +1,734 @@
+/* === HERO SECTION === */
+.contact-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-overlay {
+  text-align: center;
+  color: #000;
+  padding: 40px 60px;
+}
+
+.contact-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  color: #1f2937;
+}
+
+.contact-breadcrumb {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact-breadcrumb-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.contact-breadcrumb-separator {
+  margin: 0 6px;
+  color: #888;
+}
+
+.contact-breadcrumb-current {
+  color: #888;
+}
+/* === CONTACT SECTION === */
+.contact-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.contact-container {
+  width: 100%;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.contact-left {
+  flex: 1 1 450px;
+}
+
+.contact-small-heading {
+  color: #393185;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-main-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  margin-top:0; 
+}
+
+/* INFO BOXES */
+.contact-info-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;              /* add padding inside the box */
+  border: 1px solid #ddd;     /* light grey border */
+}
+.contact-info-box:hover{
+    cursor: pointer;
+}
+
+.contact-info-icon {
+  font-size: 50px;
+  color: #ce1e3b;
+  flex-shrink: 0;
+}
+
+.contact-info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* vertically center text with icon */
+}
+
+.contact-info-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;                  /* remove default margin */
+  line-height: 1.2;           /* tighten spacing */
+}
+
+.contact-info-desc {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0;                  /* remove default margin */
+  line-height: 1.2;           /* tighten spacing */
+}
+
+/* RIGHT SIDE - FORM */
+.contact-right {
+  flex: 1 1 500px;
+   background-color: #f9fcff; 
+     padding: 30px;
+     border-radius: 4px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-form-group {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.contact-form-group textarea {
+  min-height: 150px;
+}
+
+.contact-btn {
+  align-self: flex-start;
+  padding: 12px 30px;
+  background-color: #393185;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent; 
+}
+
+.contact-btn:hover {
+  background-color: #fff;
+  color: #393185;
+  border: 1px solid #393185;
+}
+.contact-map {
+  margin: 0;       /* remove any margin around the map section */
+  padding: 0;      /* remove padding */
+}
+
+/* GOOGLE MAP */
+.contact-map iframe {
+  width: 100%;
+  border: 0;
+  display: block;  /* ensures no inline-block gap */
+  margin: 0;       /* remove any margin */
+  padding: 0;      /* remove padding */
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-form-row {
+    flex-direction: column;
+  }
+
+  .contact-info-box {
+    align-items: flex-start;
+  }
+
+  .contact-info-icon {
+    font-size: 50px;
+  }
+}
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  outline: none;     /* remove default browser outline */
+  box-shadow: none;  /* remove any shadow if applied */
+}
+.contact-form-captcha {
+  margin-bottom: 10px; /* smaller space instead of 20px default */
+  display: flex;
+  justify-content: flex-start; /* optional: align left with form fields */
+}
+/* =========================
+   RESPONSIVE - CONTACT HERO
+   ========================= */
+
+/* Large screens - keep default (already 350px height) */
+
+/* Medium screens ≤900px */
+@media (max-width: 900px) {
+  .contact-hero {
+    height: 300px;
+  }
+
+  .contact-overlay {
+    padding: 30px 40px;
+  }
+
+  .contact-title {
+    font-size: 36px;
+  }
+
+  .contact-breadcrumb {
+    font-size: 14px;
+  }
+
+  /* Contact section layout */
+  .contact-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex: 1 1 100%;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-form-row {
+    flex-direction: column;
+  }
+
+  .contact-info-box {
+    align-items: flex-start;
+  }
+}
+
+/* Small screens ≤600px */
+@media (max-width: 600px) {
+  .contact-hero {
+    height: 250px;
+  }
+
+  .contact-overlay {
+    padding: 20px 25px;
+  }
+
+  .contact-title {
+    font-size: 28px;
+  }
+
+  .contact-breadcrumb {
+    font-size: 12px;
+  }
+
+  .contact-main-heading {
+    font-size: 28px;
+  }
+
+  .contact-small-heading {
+    font-size: 16px;
+  }
+
+  .contact-info-icon {
+    font-size: 40px;
+  }
+
+  .contact-info-title {
+    font-size: 16px;
+  }
+
+  .contact-info-desc {
+    font-size: 13px;
+  }
+
+  .contact-form-group input,
+  .contact-form-group textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .contact-btn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+
+  /* Map full width */
+  .contact-map iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra small screens ≤480px */
+@media (max-width: 480px) {
+  .contact-hero {
+    height: 200px;
+  }
+
+  .contact-overlay {
+    padding: 15px 18px;
+  }
+
+  .contact-title {
+    font-size: 24px;
+  }
+
+  .contact-breadcrumb {
+    font-size: 11px;
+  }
+
+  .contact-main-heading {
+    font-size: 24px;
+  }
+
+  .contact-small-heading {
+    font-size: 15px;
+  }
+
+  .contact-info-icon {
+    font-size: 35px;
+  }
+
+  .contact-info-title {
+    font-size: 15px;
+  }
+
+  .contact-info-desc {
+    font-size: 12px;
+  }
+
+  .contact-btn {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+
+  .contact-form-group input,
+  .contact-form-group textarea {
+    font-size: 12px;
+    padding: 7px;
+  }
+
+  .contact-map iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+/* =========================
+   CONTACT PAGE RESPONSIVE
+   ========================= */
+
+/* Medium screens ≤900px (tablets / small laptops) */
+@media (max-width: 900px) {
+
+  /* Contact grid: stack columns */
+  .contact-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex: 1 1 100%;
+  }
+
+  /* Form buttons full width */
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Form rows stack */
+  .contact-form-row {
+    flex-direction: column;
+  }
+
+  /* Info boxes align left */
+  .contact-info-box {
+    align-items: flex-start;
+  }
+
+  /* Icons slightly smaller */
+  .contact-info-icon {
+    font-size: 45px;
+  }
+
+  /* Form group inputs / textarea */
+  .contact-form-group input,
+  .contact-form-group textarea {
+    font-size: 14px;
+  }
+
+  .contact-form-group textarea {
+    min-height: 140px;
+  }
+
+  /* Reduce section padding */
+  .contact-section {
+    padding: 50px 15px;
+  }
+
+  /* Map height smaller */
+  .contact-map iframe {
+    height: 400px;
+  }
+}
+
+/* Small screens ≤600px (mobiles) */
+@media (max-width: 600px) {
+
+  /* Reduce overall section padding */
+  .contact-section {
+    padding: 40px 12px;
+  }
+
+  /* Main heading and small heading font size */
+  .contact-main-heading {
+    font-size: 28px;
+  }
+
+  .contact-small-heading {
+    font-size: 16px;
+  }
+
+  /* Info boxes: icon + text */
+  .contact-info-icon {
+    font-size: 40px;
+  }
+
+  .contact-info-title {
+    font-size: 16px;
+  }
+
+  .contact-info-desc {
+    font-size: 13px;
+  }
+
+  /* Form inputs / textarea */
+  .contact-form-group input,
+  .contact-form-group textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .contact-form-group textarea {
+    min-height: 130px;
+  }
+
+  /* Form button smaller */
+  .contact-btn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+
+  /* Map responsive height */
+  .contact-map iframe {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+/* Extra small screens ≤480px (small mobiles) */
+@media (max-width: 480px) {
+
+  /* Section padding further reduced */
+  .contact-section {
+    padding: 30px 10px;
+  }
+
+  /* Headings smaller */
+  .contact-main-heading {
+    font-size: 24px;
+  }
+
+  .contact-small-heading {
+    font-size: 15px;
+  }
+
+  /* Info boxes: icon smaller, text smaller */
+  .contact-info-icon {
+    font-size: 35px;
+  }
+
+  .contact-info-title {
+    font-size: 15px;
+  }
+
+  .contact-info-desc {
+    font-size: 12px;
+  }
+
+  /* Form inputs / textarea */
+  .contact-form-group input,
+  .contact-form-group textarea {
+    font-size: 12px;
+    padding: 7px;
+  }
+
+  .contact-form-group textarea {
+    min-height: 120px;
+  }
+
+  /* Form button smaller */
+  .contact-btn {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+
+  /* Map responsive height */
+  .contact-map iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+/* Mobile adjustments ≤600px */
+@media (max-width: 600px) {
+  /* Remove gaps between all form elements */
+  .contact-form,
+  .contact-form-row {
+    gap: 0 !important;
+  }
+
+  /* Remove padding/margin in groups */
+  .contact-form-group {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Remove bottom margin from CAPTCHA container */
+  .contact-form-captcha {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Remove extra spacing on submit button */
+  .contact-btn {
+    margin: 0 !important;
+    padding: 10px 16px; /* keep button padding but no extra top/bottom margin */
+    align-self: stretch; /* optional: full width to match fields */
+  }
+
+  /* Reduce textarea bottom spacing */
+  .contact-form-group textarea {
+    margin-bottom: 0 !important;
+  }
+}
+@media (max-width: 600px) {
+  /* Make form rows stack fully */
+  .contact-form-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  /* Form container: remove gap */
+  .contact-form {
+    gap: 0 !important;
+  }
+
+  /* Form groups: full width, no padding/margin, no flex-basis */
+  .contact-form-group {
+    flex: 1 1 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Labels: small spacing */
+  .contact-form-group label {
+    margin-bottom: 2px !important;
+  }
+
+  /* Inputs & textarea: full width, minimal padding */
+  .contact-form-group input,
+  .contact-form-group textarea {
+    width: 100% !important;
+    padding: 6px 8px !important;
+    margin: 0 !important;
+  }
+
+  .contact-form-group textarea {
+    min-height: 80px !important;
+  }
+
+  /* CAPTCHA: remove spacing */
+  .contact-form-captcha {
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: scale(0.85);
+    transform-origin: top left;
+  }
+
+  /* Submit button flush and full width */
+  .contact-btn {
+    margin: 0 !important;
+    padding: 10px 12px !important;
+    width: 100% !important;
+    align-self: stretch !important;
+  }
+
+  /* Right side form padding smaller */
+  .contact-right {
+    padding: 10px !important;
+  }
+}
+@media (max-width: 600px) {
+  /* Add small gap between form rows */
+  .contact-form {
+    gap: 10px !important; /* small vertical spacing */
+  }
+
+  .contact-form-row {
+    flex-direction: column !important;
+    gap: 10px !important; /* small gap between stacked inputs */
+  }
+
+  /* Form groups: small padding */
+  .contact-form-group {
+    padding: 4px 2px !important; /* tiny padding inside each group */
+  }
+
+  .contact-form-group label {
+    margin-bottom: 4px !important; /* label spacing */
+  }
+
+  .contact-form-group input,
+  .contact-form-group textarea {
+    padding: 8px 10px !important; /* comfortable but compact */
+    margin: 0 !important;
+  }
+
+  .contact-form-group textarea {
+    min-height: 90px !important;
+  }
+
+  /* CAPTCHA spacing */
+  .contact-form-captcha {
+    margin-bottom: 8px !important;
+    padding: 0 !important;
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+
+  /* Submit button small top margin */
+  .contact-btn {
+    margin-top: 6px !important;
+    padding: 10px 14px !important;
+    width: 100% !important;
+    align-self: stretch !important;
+  }
+
+  /* Right side form padding */
+  .contact-right {
+    padding: 15px !important;
+  }
+}
+/* Right side form padding for mobiles */
+@media (max-width: 600px) {
+  .contact-right {
+    padding: 15px 15px !important; /* equal left and right padding */
+  }
+
+  /* Also ensure form inputs respect container padding */
+  .contact-form-group input,
+  .contact-form-group textarea {
+    width: 100% !important;
+    padding: 8px 10px !important; /* inner padding */
+    box-sizing: border-box;       /* prevent overflow */
+  }
+}
+/* Left side form/info padding for mobiles */
+@media (max-width: 600px) {
+  .contact-left {
+    padding: 0 15px !important; /* equal left and right padding */
+    box-sizing: border-box;      /* ensures padding is counted within width */
+  }
+}
+.contact-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-breadcrumb a:hover,
+.contact-breadcrumb a:visited,
+.contact-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+
+
+

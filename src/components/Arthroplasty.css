@@ -1,0 +1,524 @@
+/* =========================
+   HERO
+========================= */
+.ap-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.ap-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.ap-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+/* =========================
+   BREADCRUMB
+========================= */
+.ap-breadcrumb {
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: 500; 
+}
+.ap-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ap-breadcrumb a:hover,
+.ap-breadcrumb a:visited,
+.ap-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.ap-bc-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.ap-bc-sep {
+  margin: 0 8px;
+  color: #888;
+}
+
+.ap-bc-current {
+  color: #6b7280;
+}
+
+/* =========================
+   SECTION
+========================= */
+.ap-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.ap-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ap-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.ap-main { width: 100%; }
+
+.ap-top {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.ap-top-image img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.ap-top-paras p, .ap-block p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Blocks */
+.ap-block {
+  margin-bottom: 32px;
+}
+
+.ap-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.ap-list {
+  margin-left: 18px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ap-list li {
+  margin-bottom: 10px;
+}
+
+/* Tick List */
+.ap-tick-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ap-tick-list li {
+  display: block;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 32px;
+  position: relative;
+}
+
+.ap-tick-list li::before {
+  content: "✔";
+  background: #393185;
+  color: #fff;
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+/* Conclusion Box */
+.ap-conclusion-box {
+  background: #393185;
+  color: #fff;
+  padding: 22px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.ap-conclusion-box h4 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.ap-conclusion-box p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.ap-sidebar { width: 100%; }
+
+.ap-widget {
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+.ap-widget-header {
+  background: #f5f5f5;
+  padding: 10px 12px;
+  margin: -16px -16px 12px -16px;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #1f2937;
+}
+
+/* Search */
+.ap-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ap-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.ap-search-btn {
+  padding: 10px 12px;
+  background: #393185;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Enquiry */
+.ap-enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ap-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.ap-input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.ap-submit-btn {
+  padding: 10px;
+  background: #ce1e3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Services */
+.ap-services-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ap-services-list li {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.ap-services-list li:hover {
+  color: #ce1e3b;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .ap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Remove focus outlines */
+.ap-search-input:focus,
+.ap-input:focus,
+.ap-search-btn:focus,
+.ap-submit-btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #e5e7eb !important;
+}
+
+/* =========================
+   Arthroplasty Section
+========================= */
+.ap-row {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.ap-left p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.ap-right img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.ap-smallheading {
+  font-size: 28px;
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+/* FLEX BLOCKS */
+.ap-flex-block-two,
+.ap-flex-block-three,
+.ap-flex-block-four,
+.ap-flex-block-five {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.ap-flex-two-image img,
+.ap-flex-three-image img,
+.ap-flex-four-image img,
+.ap-flex-five-image img {
+  width: 320px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.ap-flex-two-text,
+.ap-flex-three-text,
+.ap-flex-four-text,
+.ap-flex-five-text {
+  flex: 1;
+}
+
+.ap-flex-two-text p,
+.ap-flex-three-text p,
+.ap-flex-four-text p,
+.ap-flex-five-text p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1100px) {
+  .ap-grid {
+    grid-template-columns: 1fr 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ap-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ap-sidebar { order: 2; width: 100%; }
+  .ap-main { order: 1; }
+
+  .ap-flex-block-two,
+  .ap-flex-block-three,
+  .ap-flex-block-four,
+  .ap-flex-block-five {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+
+  .ap-flex-two-image img,
+  .ap-flex-three-image img,
+  .ap-flex-four-image img,
+  .ap-flex-five-image img {
+    width: 100%;
+  }
+
+  .ap-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ap-flex-two-text { order: 1; }
+  .ap-flex-two-image { order: 2; width: 100%; }
+
+  .ap-flex-four-text { order: 1; }
+  .ap-flex-four-image { order: 2; width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .ap-hero { height: 250px; }
+  .ap-hero-overlay { padding: 20px 25px; }
+  .ap-title { font-size: 32px; }
+  .ap-breadcrumb { font-size: 14px; }
+
+  .ap-subheading,
+  .ap-smallheading { font-size: 22px; }
+
+  .ap-top-paras p,
+  .ap-flex-two-text p,
+  .ap-flex-three-text p,
+  .ap-flex-four-text p,
+  .ap-flex-five-text p,
+  .ap-symptoms-intro,
+  .ap-conclusion-box p { font-size: 16px; line-height: 1.6; }
+
+  .ap-conclusion-box h4 { font-size: 26px; }
+
+  .ap-widget-header { font-size: 16px; }
+
+  .ap-tick-list li { font-size: 15px; gap: 8px; }
+  .ap-tick-list li::before { min-width: 18px; min-height: 18px; font-size: 10px; }
+
+  .ap-input, .ap-search-input { font-size: 13px; padding: 8px 10px; }
+  .ap-submit-btn, .ap-search-btn { padding: 8px 12px; font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+  .ap-hero { height: 200px; }
+  .ap-title { font-size: 26px; }
+  .ap-breadcrumb { font-size: 12px; }
+  .ap-subheading,
+  .ap-smallheading { font-size: 20px; }
+
+  .ap-top-paras p,
+  .ap-flex-two-text p,
+  .ap-flex-three-text p,
+  .ap-flex-four-text p,
+  .ap-flex-five-text p,
+  .ap-symptoms-intro,
+  .ap-conclusion-box p { font-size: 15px; line-height: 1.5; }
+
+  .ap-conclusion-box h4 { font-size: 24px; }
+
+  .ap-widget-header { font-size: 14px; }
+  .ap-tick-list li { font-size: 14px; gap: 6px; }
+  .ap-tick-list li::before { min-width: 16px; min-height: 16px; font-size: 9px; }
+
+  .ap-flex-two-image img,
+  .ap-flex-three-image img,
+  .ap-flex-four-image img,
+  .ap-flex-five-image img { width: 100%; }
+}
+/* =========================
+   Arthroplasty Images - Uniform Size
+========================= */
+.ap-row img,
+.ap-flex-two-image img,
+.ap-flex-three-image img {
+  width: 100%;
+  height: 250px; /* fixed height for desktop */
+  object-fit: cover; /* maintain aspect ratio, crop if needed */
+  border-radius: 6px;
+}
+
+/* Adjust for larger desktop images if needed */
+@media (min-width: 1200px) {
+  .ap-row img,
+  .ap-flex-two-image img,
+  .ap-flex-three-image img {
+    height: 300px;
+  }
+}
+
+/* Responsive adjustments for tablets & mobiles */
+@media (max-width: 900px) {
+  .ap-row img,
+  .ap-flex-two-image img,
+  .ap-flex-three-image img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ap-row img,
+  .ap-flex-two-image img,
+  .ap-flex-three-image img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ap-row img,
+  .ap-flex-two-image img,
+  .ap-flex-three-image img {
+    height: 200px;
+  }
+}
+/* =========================
+   Center Arthroplasty Images on Mobile
+========================= */
+@media (max-width: 900px) {
+  /* Center images in .ap-row and flex blocks */
+  .ap-row img,
+  .ap-flex-two-image img,
+  .ap-flex-three-image img {
+    display: block;
+    margin: 0 auto; /* centers the image */
+  }
+
+  /* Ensure the containers take full width */
+  .ap-left,
+  .ap-flex-three-image,
+  .ap-flex-two-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
