@@ -1,0 +1,164 @@
+.numbers-section {
+  background-color: #f2f6f6;
+  padding: 50px 20px;
+}
+
+.numbers-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.numbers-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap !important;   /* force no wrap */
+  flex-wrap: nowrap !important;     /* force icon to stay on same line */
+  font-size: clamp(16px, 5vw, 35px); /* auto-resize text on smaller screens */
+  color: #1F2937;
+  margin-bottom: 40px;
+}
+
+.numbers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.number-card {
+  position: relative; /* required for pseudo-element */
+  background: #ffffff; /* white background */
+  padding: 20px;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-bottom: 4px solid #ce1e3b; /* bottom border */
+  overflow: hidden; /* make sure gradient is clipped inside card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.number-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* height of fog */
+  background: linear-gradient(to top, rgba(206, 30, 59, 0.05), transparent); /* very light red fog effect */
+  pointer-events: none;
+}
+.number-card:hover {
+    cursor: pointer;
+
+}
+
+.number-heading {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.number-count {
+  font-size: 40px;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .numbers-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .number-card {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .number-count {
+    font-size: 42px;
+  }
+
+  .number-heading {
+    font-size: 14px;
+  }
+}
+.numbers-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  font-size: 35px;
+  color: #1F2937;
+  margin-bottom: 40px;
+}
+
+.numbers-heading .heading-icon {
+  font-size: 1em;     /* icon scales with text */
+  color: #ce1e3b;
+  display: inline-flex;
+  align-items: center;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .numbers-heading {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .numbers-heading .heading-icon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .numbers-heading {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .numbers-heading .heading-icon {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .numbers-heading {
+    font-size: 28px;
+    white-space: normal;  /* allow wrap but keep icon attached */
+    flex-wrap: wrap;
+  }
+
+  .heading-text {
+    display: inline;
+  }
+
+  .heading-icon {
+    font-size: 26px;
+    position: relative;
+    top: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .numbers-heading {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .heading-icon {
+    font-size: 20px;
+    top: 0;
+  }
+}
+
+.numbers-heading{
+  font-weight: bold; 
+}

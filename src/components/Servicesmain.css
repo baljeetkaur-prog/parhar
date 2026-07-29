@@ -1,0 +1,339 @@
+.mainservices-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;                    /* Desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover !important;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.mainservices-overlay {
+  text-align: center;
+  padding: 40px 60px;
+  width: 100%;
+}
+
+.mainservices-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #1f2937;
+}
+
+.mainservices-breadcrumb {
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.mainservices-breadcrumb-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.mainservices-breadcrumb-separator {
+  margin: 0 8px;
+  color: #888;
+}
+
+.mainservices-breadcrumb-current {
+  color: #6b7280;
+}
+/* === SERVICES SECTION === */
+.mainservices-section {
+  padding: 60px 20px;
+}
+
+.mainservices-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mainservices-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;          /* More spacing between cards */
+}
+
+/* === SERVICE CARD === */
+.mainservices-card {
+  background: #f2f6f6;
+  padding: 25px 20px;  /* Reduced padding */
+  text-align: center;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  border: 1px solid #dfe5e5;
+
+  display: flex;
+  flex-direction: column;
+  height: auto;        /* No forced tall cards */
+  min-height: 360px;   /* Ensures all cards are even but not too tall */
+}
+.mainservices-card:hover{
+    cursor: pointer;
+}
+
+/* ICON */
+.mainservices-icon {
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  border: 3px double #393185;
+  display: flex;
+   perspective: 400px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.mainservices-icon img {
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+}
+
+/* TITLE */
+.mainservices-title-sm {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+.mainservices-title-sm:hover{
+    color: #393185; 
+    cursor: pointer;
+
+}
+
+/* DESCRIPTION */
+.mainservices-desc {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.8;
+  margin-bottom: 12px;       /* ← Reduced spacing */
+  text-align: center;
+  flex-grow: 1;               /* keeps the button at bottom */
+}
+
+/* BUTTON */
+.mainservices-btn {
+  background: #ce1e3b;
+  color: #fff;
+  padding: 8px 16px;
+  border: 1px solid transparent; 
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: 600; 
+}
+
+.mainservices-btn:hover {
+  background-color: #fff;
+  color: #ce1e3b; 
+  border: 1px solid #ce1e3b;
+}
+
+/* === RESPONSIVE GRID === */
+@media (max-width: 1000px) {
+  .mainservices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mainservices-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ICON ROTATION */
+.mainservices-card:hover .mainservices-icon img {
+  animation: servicesRotate 1.5s forwards;
+}
+
+@keyframes servicesRotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+.mainservices-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+/* === MOBILE SCREENS (600px and below) === */
+@media (max-width: 600px) {
+  .mainservices-section {
+    padding: 40px 15px; /* reduce padding */
+  }
+
+  .mainservices-container {
+    padding: 0 10px;
+  }
+
+  .mainservices-hero {
+    height: 250px; /* reduce hero height */
+  }
+
+  .mainservices-overlay {
+    padding: 20px 25px;
+  }
+
+  .mainservices-title {
+    font-size: 32px; /* smaller hero title */
+  }
+
+  .mainservices-breadcrumb {
+    font-size: 14px;
+  }
+
+  .mainservices-grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    gap: 20px;
+  }
+
+  .mainservices-card {
+    min-height: auto; /* let height adjust */
+    padding: 20px;
+  }
+
+  .mainservices-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .mainservices-icon img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .mainservices-title-sm {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .mainservices-desc {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .mainservices-btn {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+}
+
+/* === EXTRA SMALL SCREENS (480px and below) === */
+@media (max-width: 480px) {
+  .mainservices-section {
+    padding: 30px 10px;
+  }
+
+  .mainservices-hero {
+    height: 200px; /* smaller hero */
+  }
+
+  .mainservices-overlay {
+    padding: 15px 20px;
+  }
+
+  .mainservices-title {
+    font-size: 26px; /* smaller title */
+  }
+
+  .mainservices-breadcrumb {
+    font-size: 12px;
+  }
+
+  .mainservices-grid {
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 15px;
+  }
+
+  .mainservices-card {
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .mainservices-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mainservices-icon img {
+    width: 55%;
+    height: 55%;
+  }
+
+  .mainservices-title-sm {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .mainservices-desc {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .mainservices-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .mainservices-hero {
+    height: 250px !important;
+  }
+
+  .mainservices-overlay {
+    padding: 20px 25px !important;
+  }
+
+  .mainservices-title {
+    font-size: 32px !important;
+  }
+
+  .mainservices-breadcrumb {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainservices-hero {
+    height: 200px !important;
+  }
+
+  .mainservices-overlay {
+    padding: 15px 18px !important;
+  }
+
+  .mainservices-title {
+    font-size: 26px !important;
+  }
+
+  .mainservices-breadcrumb {
+    font-size: 12px !important;
+  }
+}
+.mainservices-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mainservices-breadcrumb a:hover,
+.mainservices-breadcrumb a:visited,
+.mainservices-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}

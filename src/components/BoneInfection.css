@@ -1,0 +1,708 @@
+/* =========================
+   HERO
+========================= */
+.bi-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top;  /* SAME AS ar-hero */
+}
+
+.bi-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.bi-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1f2937;  /* SAME AS Arthritis */
+}
+
+/* =========================
+   BREADCRUMB
+========================= */
+.bi-breadcrumb {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.bi-bc-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.bi-bc-sep {
+  margin: 0 8px;
+  color: #888;
+}
+
+.bi-bc-current {
+  color: #6b7280;
+}
+/* =========================
+   SECTION
+========================= */
+.bi-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.bi-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bi-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.bi-main { width: 100%; }
+
+.bi-top {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.bi-top-image img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.bi-top-paras p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Blocks */
+.bi-block {
+  margin-bottom: 32px;
+}
+
+.bi-subheading {
+  font-size: 28px;
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Lists */
+.bi-list {
+  margin-left: 18px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.bi-list li {
+  margin-bottom: 10px;
+}
+
+/* Tick List */
+.bi-tick-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bi-tick-list li {
+  display: block;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 32px;
+  position: relative;
+}
+
+.bi-tick-list li::before {
+  content: "✔";
+  background: #393185;
+  color: #fff;
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+/* Conclusion Box */
+.bi-conclusion-box {
+  background: #393185;
+  color: #fff;
+  padding: 22px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.bi-conclusion-box h4 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.bi-conclusion-box p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.bi-sidebar { width: 100%; }
+
+.bi-widget {
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+.bi-widget-header {
+  background: #f5f5f5;
+  padding: 10px 12px;
+  margin: -16px -16px 12px -16px;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #1f2937;
+}
+
+/* Search */
+.bi-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bi-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.bi-search-btn {
+  padding: 10px 12px;
+  background: #393185;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Enquiry */
+.bi-enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bi-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.bi-input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.bi-submit-btn {
+  padding: 10px;
+  background: #ce1e3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Services */
+.bi-services-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bi-services-list li {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.bi-services-list li:hover {
+  color: #ce1e3b;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .bi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Remove focus outlines */
+.bi-search-input:focus,
+.bi-input:focus,
+.bi-search-btn:focus,
+.bi-submit-btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #e5e7eb !important;
+}
+/* =========================
+   Bone Infection Section
+========================= */
+
+.bi-block {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.bi-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+/* left text + right image layout */
+.bi-row {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.bi-left p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.bi-right img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.bi-smallheading {
+  font-size: 28px;
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+/* =========================
+   FLEX BLOCK (Left Image – Right Text)
+   ========================= */
+.bi-flex-block-two {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+/* LEFT IMAGE */
+.bi-flex-two-image img {
+  width: 320px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* RIGHT TEXT */
+.bi-flex-two-text {
+  flex: 1;
+}
+
+.bi-flex-two-text p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Heading (same as previous) */
+.bi-smallheading {
+  font-size: 28px;
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bi-flex-block-two {
+    flex-direction: column;
+  }
+
+  .bi-flex-two-image img {
+    width: 100%;
+  }
+}
+/* =========================
+   FLEX BLOCK 3 (Left Text – Right Image)
+   ========================= */
+.bi-flex-block-three {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+/* LEFT TEXT */
+.bi-flex-three-text {
+  flex: 1;
+}
+
+.bi-flex-three-text p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* RIGHT IMAGE */
+.bi-flex-three-image img {
+  width: 320px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bi-flex-block-three {
+    flex-direction: column;
+  }
+
+  .bi-flex-three-image img {
+    width: 100%;
+  }
+}
+/* =========================
+   FLEX BLOCK 4 (Left Image – Right Text)
+   ========================= */
+.bi-flex-block-four {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+/* LEFT IMAGE */
+.bi-flex-four-image img {
+  width: 320px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* RIGHT TEXT */
+.bi-flex-four-text {
+  flex: 1;
+}
+
+.bi-flex-four-text p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bi-flex-block-four {
+    flex-direction: column;
+  }
+
+  .bi-flex-four-image img {
+    width: 100%;
+  }
+}
+/* =========================
+   FLEX BLOCK 5 (Left Text – Right Image)
+   ========================= */
+.bi-flex-block-five {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+/* LEFT TEXT */
+.bi-flex-five-text {
+  flex: 1;
+}
+
+.bi-flex-five-text p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* RIGHT IMAGE */
+.bi-flex-five-image img {
+  width: 320px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bi-flex-block-five {
+    flex-direction: column;
+  }
+
+  .bi-flex-five-image img {
+    width: 100%;
+  }
+}
+.bi-symptoms-intro{
+     color: #6b7280;
+  font-size: 17px;
+  line-height: 1.7;
+}
+/* =========================
+   RESPONSIVE MEDIA QUERIES
+   ========================= */
+
+/* Medium screens ≤1100px */
+@media (max-width: 1100px) {
+  .bi-grid {
+    grid-template-columns: 1fr 320px; /* sidebar shrinks */
+  }
+
+  .bi-right img,
+  .bi-flex-two-image img,
+  .bi-flex-three-image img,
+  .bi-flex-four-image img,
+  .bi-flex-five-image img {
+    max-width: 100%;
+  }
+}
+
+/* Tablet / small screens ≤900px */
+@media (max-width: 900px) {
+  .bi-grid {
+    grid-template-columns: 1fr; /* stack main + sidebar */
+    gap: 30px;
+  }
+
+  /* Sidebar below main content */
+  .bi-sidebar {
+    order: 2;
+    width: 100%;
+  }
+
+  .bi-main {
+    order: 1;
+  }
+
+  /* Flex blocks stack vertically */
+  .bi-flex-block-two,
+  .bi-flex-block-three,
+  .bi-flex-block-four,
+  .bi-flex-block-five {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+
+  .bi-flex-two-image img,
+  .bi-flex-three-image img,
+  .bi-flex-four-image img,
+  .bi-flex-five-image img {
+    width: 100%;
+  }
+
+  /* Two-column rows stack */
+  .bi-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Small screens ≤600px */
+@media (max-width: 600px) {
+  /* HERO SECTION */
+  .bi-hero {
+    height: 250px;
+  }
+
+  .bi-hero-overlay {
+    padding: 20px 25px;
+  }
+
+  .bi-title {
+    font-size: 32px;
+  }
+
+  .bi-breadcrumb {
+    font-size: 14px;
+  }
+
+  /* Main content typography */
+  .bi-subheading,
+  .bi-smallheading {
+    font-size: 22px;
+  }
+
+  .bi-top-paras p,
+  .bi-flex-two-text p,
+  .bi-flex-three-text p,
+  .bi-flex-four-text p,
+  .bi-flex-five-text p,
+  .bi-symptoms-intro,
+  .bi-conclusion-box p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .bi-conclusion-box h4 {
+    font-size: 26px;
+  }
+
+  /* Sidebar widgets */
+  .bi-widget-header {
+    font-size: 16px;
+  }
+
+  .bi-tick-list li {
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .bi-tick-list li::before {
+    min-width: 18px;
+    min-height: 18px;
+    font-size: 10px;
+  }
+
+  /* Form inputs */
+  .bi-input,
+  .bi-search-input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .bi-submit-btn,
+  .bi-search-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small screens ≤480px */
+@media (max-width: 480px) {
+  /* HERO */
+  .bi-hero {
+    height: 200px;
+  }
+
+  .bi-title {
+    font-size: 26px;
+  }
+
+  .bi-breadcrumb {
+    font-size: 12px;
+  }
+
+  /* Main content headings */
+  .bi-subheading,
+  .bi-smallheading {
+    font-size: 20px;
+  }
+
+  /* Paragraphs */
+  .bi-top-paras p,
+  .bi-flex-two-text p,
+  .bi-flex-three-text p,
+  .bi-flex-four-text p,
+  .bi-flex-five-text p,
+  .bi-symptoms-intro,
+  .bi-conclusion-box p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .bi-conclusion-box h4 {
+    font-size: 24px;
+  }
+
+  /* Sidebar */
+  .bi-widget-header {
+    font-size: 14px;
+  }
+
+  .bi-tick-list li {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .bi-tick-list li::before {
+    min-width: 16px;
+    min-height: 16px;
+    font-size: 9px;
+  }
+
+  /* Flex block images */
+  .bi-flex-two-image img,
+  .bi-flex-three-image img,
+  .bi-flex-four-image img,
+  .bi-flex-five-image img {
+    width: 100%;
+  }
+}
+/* Move image below text on mobile */
+@media (max-width: 900px) {
+  .bi-flex-block-two {
+    flex-direction: column;
+  }
+
+  /* Set text first, image second */
+  .bi-flex-two-text {
+    order: 1;
+  }
+
+  .bi-flex-two-image {
+    order: 2;
+    width: 100%; /* already set, but keep for clarity */
+  }
+}
+/* Move FLEX BLOCK FOUR image below text on mobile */
+@media (max-width: 900px) {
+  .bi-flex-four-text {
+    order: 1;
+  }
+
+  .bi-flex-four-image {
+    order: 2;
+    width: 100%;
+  }
+}
+
+
+
+
+

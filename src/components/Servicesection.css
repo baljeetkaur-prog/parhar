@@ -1,0 +1,369 @@
+.service-section {
+  background-color: #F2F6F6;
+  padding: 20px 0;
+}
+
+.service-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Header */
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.service-header h1 {
+font-size: 28px;
+    color: #1F2937;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.service-header h1 svg {
+  color: #ce1e3b;
+  font-size: 34px;
+}
+
+/* Slider buttons */
+.services-slider-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.services-slider-btn {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.services-slider-btn:hover {
+  background-color: #ce1e3b;
+  color: #fff;
+}
+
+/* Cards Row */
+.service-slider {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 10px;
+  /* scroll-snap-type: x mandatory; */
+  scroll-padding: 15px;
+}
+
+.service-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Cards */
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.6s ease;
+  flex: 0 0 calc(16.66% - 35px);
+  will-change: transform;
+  /* scroll-snap-align: start; */
+}
+
+/* Hover effect */
+.service-card:hover {
+  border-color: #393185;
+  cursor: pointer;
+}
+
+/* Circular Image */
+.service-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #F2F6F6;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.6s ease;
+}
+
+.service-image img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  transition: transform 1.2s ease-in-out, filter 0.6s ease;
+}
+
+/* Hover Animation */
+.service-card:hover .service-image {
+  background-color: #cfd5fa;
+  perspective: 400px;
+}
+
+.service-card:hover .service-image img {
+  animation: rotateYOnce 1.2s forwards;
+  filter: brightness(2) saturate(10) sepia(1) hue-rotate(0deg);
+}
+
+@keyframes rotateYOnce {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+/* Name */
+.service-card p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1F2937;
+}
+
+/* Button */
+.service-button-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.all-services-btn {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ce1e3b;
+  color: #fff;
+  background-color: transparent;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+.all-services-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ce1e3b;
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.all-services-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.all-services-btn:hover::before {
+  transform: scaleX(0);
+}
+
+.all-services-btn:hover span {
+  color: #ce1e3b;
+}
+
+/* ================== Responsive ================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .service-card {
+    flex: 0 0 calc(33.33% - 20px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .service-header h1 {
+    font-size: 29px;
+    font-weight: 700; 
+    gap: 8px;
+  }
+
+  .service-header h1 svg {
+    font-size: 28px;
+  }
+
+  /* 3 cards visible per slide */
+  .service-card {
+    flex: 0 0 calc(33.33% - 15px);
+  }
+
+  .service-slider {
+    gap: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .service-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+
+  .services-slider-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .all-services-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+/* === EXTRA SMALL SCREENS (max-width: 480px) === */
+@media (max-width: 480px) {
+  /* Header */
+  .service-header h1 {
+    font-size: 24px;
+    gap: 6px;
+  }
+
+  .service-header h1 svg {
+    font-size: 24px;
+  }
+
+  /* Slider buttons */
+  .services-slider-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  /* Cards visible: 2 per slide */
+  .service-card {
+    flex: 0 0 calc(50% - 12px);
+  }
+
+  .service-slider {
+    gap: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  /* Card image */
+  .service-image {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .service-image img {
+    width: 65%;
+    height: 65%;
+  }
+
+  /* Card text */
+  .service-card p {
+    font-size: 12px;
+  }
+
+  /* "All Services" button */
+  .all-services-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  /* Reduce gap in slider controls */
+  .services-slider-controls {
+    gap: 6px;
+  }
+}
+.services-service-slider {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: scroll-position;
+}
+/* Desktop */
+@media (min-width: 900px) {
+  .services-slider-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .services-slider-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .services-slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+.service-icon-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.services-heading{
+  font-size: 30px; 
+  font-weight: 700; 
+  margin-bottom:10px; 
+  color: #333;
+}
+@media (max-width: 1024px) {
+  .services-heading {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Small tablets / large mobiles (<= 768px) */
+@media (max-width: 768px) {
+  .services-heading {
+    font-size: 24px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}
+
+/* Mobiles (<= 480px) */
+@media (max-width: 480px) {
+  .services-heading {
+    font-size: 20px;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+}
+
+

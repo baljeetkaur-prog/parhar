@@ -1,0 +1,542 @@
+.lifestory-section {
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+
+.lifestory-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Box with background image applied from JS */
+.lifestory-content {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(57, 49, 133, 0.1);
+  background-color: #393185;
+  color: #fff;
+}
+
+/* Text Side */
+.lifestory-text {
+  flex: 1;
+  z-index: 1;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.lifestory-text h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+   margin-bottom: 5px; 
+}
+
+.lifestory-text h2 {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 700;
+   margin-top: 0; 
+  margin-bottom: 15px;
+}
+
+.lifestory-text p {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #fff;
+  max-width: 620px;
+  text-align: justify;
+}
+
+/* Video Side */
+.lifestory-video {
+  position: relative;
+  flex: 1.2; /* make video take slightly more space than text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px; /* ensure container has height on desktop */
+}
+
+.video-element {
+  width: 100%;
+  max-width: 1000px; /* increased from 520px */
+   height: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+/* Play Button Overlay */
+.play-overlay {
+  position: absolute;
+  background: rgba(57, 49, 133, 0.85);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.play-icon {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.play-overlay:hover {
+  background: #ce1e3b;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .lifestory-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+  }
+
+  .lifestory-video {
+    margin-top: 30px;
+  }
+
+  .video-element {
+    max-width: 100%;
+  }
+}
+.custom-controls {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lifestory-video:hover .custom-controls {
+  opacity: 1; /* show controls when hovering over video */
+}
+
+.control-btn {
+  background: rgba(57, 49, 133, 0.85);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.control-btn:hover {
+  background: #ce1e3b;
+  transform: scale(1.1);
+}
+/* Centered Play Overlay */
+.play-overlay-centered {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Black core (main play circle) */
+.play-circle {
+  position: relative;
+  z-index: 3;
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.7); /* darkest black core */
+  backdrop-filter: blur(6px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.play-icon-centered {
+  color: #fff;
+  font-size: 25px;
+  margin-left: 4px;
+}
+
+/* Black gradient glows — lighter tones outward */
+.outer-glow,
+.inner-glow {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4); /* default tone */
+  z-index: 1;
+  backdrop-filter: blur(4px);
+  transition: 0.3s ease;
+}
+
+.outer-glow {
+  width: 130px;
+  height: 130px;
+  background: rgba(0, 0, 0, 0.25); /* lightest black ring */
+}
+
+.inner-glow {
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.45); /* medium-dark ring */
+}
+
+/* Hover glow effect (slightly increases brightness but still black tones) */
+.play-overlay-centered:hover .outer-glow {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.play-overlay-centered:hover .inner-glow {
+  background: rgba(0, 0, 0, 0.55);
+}
+/* Pause overlay behaves same as play, but only visible on hover */
+.pause-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+/* show pause overlay only when hovered */
+.lifestory-video:hover .pause-overlay {
+  opacity: 1;
+}
+/* ===== Mobile adjustments ===== */
+@media (max-width: 992px) {
+  .lifestory-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px; /* reduced padding */
+    gap: 25px;
+  }
+
+  .lifestory-text h3 {
+    font-size: 1.1rem; /* smaller heading */
+  }
+
+  .lifestory-text h2 {
+    font-size: 1.8rem; /* smaller main heading */
+  }
+
+  .lifestory-text p {
+    font-size: 0.9rem; /* smaller paragraph */
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .lifestory-video {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .video-element {
+    width: 100%;
+    height: 250px; /* reduced height */
+    max-width: 100%;
+  }
+
+  /* Play button smaller */
+  .play-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-icon-centered {
+    font-size: 20px;
+    margin-left: 2px;
+  }
+
+  .outer-glow {
+    width: 90px;
+    height: 90px;
+  }
+
+  .inner-glow {
+    width: 70px;
+    height: 70px;
+  }
+  
+  /* Optional: reduce control buttons */
+  .control-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+/* === Extra Small Screens (max-width: 480px) === */
+@media (max-width: 480px) {
+  .lifestory-content {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 15px;
+  }
+
+  /* Text adjustments */
+  .lifestory-text h3 {
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+  }
+
+  .lifestory-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .lifestory-text p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  /* Video adjustments */
+  .lifestory-video {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .video-element {
+    width: 100%;
+    height: 180px; /* smaller height */
+    max-width: 100%;
+  }
+
+  /* Centered Play Overlay */
+  .play-overlay-centered {
+    inset: 0;
+  }
+
+  .play-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .play-icon-centered {
+    font-size: 16px;
+    margin-left: 1px;
+  }
+
+  .outer-glow {
+    width: 70px;
+    height: 70px;
+  }
+
+  .inner-glow {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Control buttons smaller */
+  .control-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  /* Reduce shadow intensity for smaller screens */
+  .lifestory-content {
+    box-shadow: 0 6px 15px rgba(57, 49, 133, 0.08);
+  }
+}
+@media (max-width: 480px) {
+  .lifestory-video {
+    width: 100%;
+    margin-top: 15px;
+    min-height: 180px; /* ensures container is visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* for overlays */
+  }
+  
+  .video-element {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+}
+.play-overlay-centered,
+.pause-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+@media (max-width: 480px) {
+  .lifestory-content {
+    overflow: visible; /* allow video to be seen */
+  }
+}
+@media (max-width: 480px) {
+  .lifestory-content {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 15px;
+    overflow: visible;
+    
+    /* Keep background visible */
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 250px; /* or adjust as needed */
+  }
+
+  /* Optional: ensure background color doesn't cover image */
+  .lifestory-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit; /* keep background image */
+    z-index: 0;
+  }
+
+  .lifestory-text,
+  .lifestory-video {
+    position: relative;
+    z-index: 1; /* ensure content is above bg */
+  }
+}
+@media (max-width: 480px) {
+  .lifestory-content {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 15px;
+    overflow: visible;
+    min-height: 350px; /* force container to be tall enough */
+    position: relative; /* needed for overlays */
+  }
+
+  .lifestory-text,
+  .lifestory-video {
+    position: relative;
+    z-index: 1; /* content above background */
+  }
+
+  .video-element {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+}
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: none; /* hidden initially */
+}
+
+.video-element.show-video {
+  display: block;
+}
+
+.video-element.hide-video {
+  display: none;
+}
+.play-overlay-centered,
+.pause-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Hover glow for both play and pause */
+.play-overlay-centered:hover .outer-glow,
+.pause-overlay:hover .outer-glow {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.play-overlay-centered:hover .inner-glow,
+.pause-overlay:hover .inner-glow {
+  background: rgba(0, 0, 0, 0.55);
+}
+.vision-head {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.journey-main-heading {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* 📱 Tablets & small laptops */
+@media (max-width: 1024px) {
+  .vision-head {
+    font-size: 22px;
+  }
+
+  .journey-main-heading {
+    font-size: 34px;
+  }
+}
+
+/* 📱 Mobile devices */
+@media (max-width: 768px) {
+  .vision-head {
+    font-size: 20px;
+  }
+
+  .journey-main-heading {
+    font-size: 28px;
+  }
+}
+
+/* 📱 Small mobiles */
+@media (max-width: 480px) {
+  .vision-head {
+    font-size: 18px;
+  }
+
+  .journey-main-heading {
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+

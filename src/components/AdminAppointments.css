@@ -1,0 +1,117 @@
+.admin-appointments {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 30px;
+  background: #fafafa;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-appointments h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Table wrapper for scroll on mobile */
+.admin-apptable-wrapper {
+  overflow-x: auto;
+}
+
+.admin-apptable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.admin-apptable th,
+.admin-apptable td {
+  padding: 12px 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  text-align: left;
+  background-color: #fff;
+  vertical-align: top;
+}
+
+.admin-apptable th {
+  background-color: #393185;
+  color: white;
+  font-weight: 600;
+}
+
+.admin-apptable tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+@media (max-width: 600px) {
+  .admin-appointments {
+    padding: 20px;
+  }
+
+  .admin-apptable th,
+  .admin-apptable td {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+/* Pagination Wrapper */
+.adminenqpag {
+  margin-top: 25px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Number Buttons */
+.adminenqpag-btn {
+  border: none;
+  background-color: #e0e0ff;
+  color: #393185;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adminenqpag-btn:hover {
+  background-color: #393185;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.adminenqpag-btn.active {
+  background-color: #393185;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transform: scale(1.15);
+}
+
+/* Arrow Buttons */
+.adminenqpag-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #fff;
+  color: #393185;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.adminenqpag-arrow:hover {
+  background-color: #393185;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.adminenqpag-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+

@@ -1,0 +1,455 @@
+/* === HERO SECTION === */
+.mainappointment-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mainappointment-overlay {
+  text-align: center;
+  color: #000;
+  padding: 40px 60px;
+}
+
+.mainappointment-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  color: #1f2937;
+}
+
+.mainappointment-breadcrumb {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.mainappointment-breadcrumb-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.mainappointment-breadcrumb-separator {
+  margin: 0 6px;
+  color: #888;
+}
+
+.mainappointment-breadcrumb-current {
+  color: #888;
+}
+/* === APPOINTMENT FORM SECTION === */
+.mainappointment-form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.mainappointment-form-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1f2937;
+  text-align: center;
+}
+
+.mainappointment-form-container {
+  position: relative; /* needed for absolute positioning */
+  background-color: #fff;
+  padding: 40px;
+  max-width: 1100px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  overflow: visible; /* so the floating image is visible outside */
+}
+/* === INPUT GROUPS === */
+.mainappointment-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.mainappointment-input-group label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.mainappointment-input-group input,
+.mainappointment-input-group select,
+.mainappointment-input-group textarea {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+/* === INPUT ROW FOR NAME/EMAIL & SELECTS === */
+.mainappointment-input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.mainappointment-input-row .mainappointment-input-group {
+  flex: 1;
+}
+
+/* === SUBMIT BUTTON === */
+.mainappointment-submit-btn {
+  background-color: #393185;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 30px; /* reduced padding for smaller width */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block; /* make width depend on content */
+  text-align: center;
+}
+.mainappointment-form-heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the heading + image together */
+  gap: 5px; /* space between heading and image */
+  margin-bottom: 10px;
+}
+
+.form-heading-icon {
+  width: 30px; /* adjust size */
+  height: 30px;
+}
+/* =========================
+   MEDIA QUERIES - APPOINTMENT PAGE
+   ========================= */
+
+/* Medium screens ≤900px - tablets / small laptops */
+@media (max-width: 900px) {
+
+  /* HERO SECTION */
+  .mainappointment-hero {
+    height: 300px;
+  }
+  .mainappointment-overlay {
+    padding: 30px 40px;
+  }
+  .mainappointment-title {
+    font-size: 36px;
+  }
+  .mainappointment-breadcrumb {
+    font-size: 14px;
+  }
+
+  /* FORM SECTION */
+  .mainappointment-form-container {
+    padding: 30px;
+  }
+
+  .mainappointment-input-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mainappointment-input-group input,
+  .mainappointment-input-group textarea,
+  .mainappointment-input-group select {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .mainappointment-submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small screens ≤600px - mobiles */
+@media (max-width: 600px) {
+
+  /* HERO SECTION */
+  .mainappointment-hero {
+    height: 250px;
+  }
+  .mainappointment-overlay {
+    padding: 20px 25px;
+  }
+  .mainappointment-title {
+    font-size: 28px;
+  }
+  .mainappointment-breadcrumb {
+    font-size: 12px;
+  }
+
+  /* FORM SECTION */
+  .mainappointment-form-container {
+    padding: 20px;
+    box-shadow: none; /* optional: remove shadow on mobile */
+  }
+
+  .mainappointment-form {
+    gap: 10px; /* smaller spacing */
+  }
+
+  .mainappointment-input-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mainappointment-input-group {
+    padding: 0;
+  }
+
+  .mainappointment-input-group input,
+  .mainappointment-input-group textarea,
+  .mainappointment-input-group select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .mainappointment-input-group textarea {
+    min-height: 90px;
+  }
+
+  /* CAPTCHA */
+  .mainappointment-input-group .g-recaptcha {
+    transform: scale(0.9);
+    transform-origin: top left;
+    margin-bottom: 8px;
+  }
+
+  /* Submit button */
+  .mainappointment-submit-btn {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  /* Form container full width with side padding */
+  .mainappointment-form-container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Extra small screens ≤480px - small mobiles */
+@media (max-width: 480px) {
+
+  /* HERO SECTION */
+  .mainappointment-hero {
+    height: 200px;
+  }
+  .mainappointment-overlay {
+    padding: 15px 18px;
+  }
+  .mainappointment-title {
+    font-size: 24px;
+  }
+  .mainappointment-breadcrumb {
+    font-size: 11px;
+  }
+
+  /* FORM SECTION */
+  .mainappointment-form-container {
+    padding: 15px;
+  }
+
+  .mainappointment-input-group input,
+  .mainappointment-input-group textarea,
+  .mainappointment-input-group select {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .mainappointment-input-group textarea {
+    min-height: 80px;
+  }
+
+  .mainappointment-submit-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+/* =========================
+   MEDIA QUERIES - FORM & CONTENT
+   ========================= */
+
+/* Medium screens ≤900px */
+@media (max-width: 900px) {
+  .mainappointment-form-heading {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .form-heading-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .mainappointment-input-group label {
+    font-size: 15px;
+  }
+
+  .mainappointment-input-group input,
+  .mainappointment-input-group select,
+  .mainappointment-input-group textarea {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .mainappointment-input-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mainappointment-submit-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Small screens ≤600px */
+@media (max-width: 600px) {
+  .mainappointment-form-heading {
+    font-size: 24px;
+  }
+
+  .form-heading-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mainappointment-input-group label {
+    font-size: 14px;
+  }
+
+  .mainappointment-input-group input,
+  .mainappointment-input-group select,
+  .mainappointment-input-group textarea {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .mainappointment-input-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mainappointment-submit-btn {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .mainappointment-input-group textarea {
+    min-height: 90px;
+  }
+
+  .mainappointment-input-group .g-recaptcha {
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+}
+
+/* Extra small screens ≤480px */
+@media (max-width: 480px) {
+  .mainappointment-form-heading {
+    font-size: 20px;
+  }
+
+  .form-heading-icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom:10px; 
+  }
+
+  .mainappointment-input-group label {
+    font-size: 13px;
+  }
+
+  .mainappointment-input-group input,
+  .mainappointment-input-group select,
+  .mainappointment-input-group textarea {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .mainappointment-submit-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .mainappointment-input-group textarea {
+    min-height: 80px;
+  }
+
+  .mainappointment-form-container {
+    padding: 12px;
+  }
+}
+/* === RESET SELECT STYLES === */
+.mainappointment-input-group select {
+  -webkit-appearance: none;  /* remove iOS native style */
+  -moz-appearance: none;     /* Firefox */
+  appearance: none;
+  background-color: #fff;    /* match input fields */
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  font-size: 16px;
+  color: #333;               /* text & placeholder color */
+  outline: none;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Placeholder color for the first option */
+.mainappointment-input-group select option[value=""] {
+  color: #888;
+}
+
+/* === MOBILE OVERRIDES === */
+@media (max-width: 600px) {
+  .mainappointment-input-group select {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .mainappointment-input-group select option[value=""] {
+    color: #888;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainappointment-input-group select {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+}
+.mainappointment-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mainappointment-breadcrumb a:hover,
+.mainappointment-breadcrumb a:visited,
+.mainappointment-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.mainappointment-input-group input[type="time"]::-webkit-datetime-edit {
+  color: transparent;
+}
+
+.mainappointment-input-group input[type="time"]:focus::-webkit-datetime-edit,
+.mainappointment-input-group input[type="time"]:valid::-webkit-datetime-edit {
+  color: #333;
+}

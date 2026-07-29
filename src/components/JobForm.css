@@ -1,0 +1,460 @@
+/* HERO SECTION */
+.jobform-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
+}
+
+.jobform-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.jobform-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  color: #1f2937;
+}
+
+.jobform-breadcrumb {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.jobform-breadcrumb a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* HERO SECTION */
+.jobform-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
+}
+
+.jobform-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.jobform-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  color: #1f2937;
+}
+
+.jobform-breadcrumb {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.jobform-breadcrumb a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* FORM SECTION */
+.jobform-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.jobform-container {
+  background-color: #fff;
+  padding: 40px;
+  max-width: 1100px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+
+.jobform-heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.jobform-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  color: #1f2937;
+}
+
+.jobform-heading-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* FORM STYLING */
+.jobform-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.jobform-input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.jobform-input-row .jobform-input-group {
+  flex: 1;
+}
+
+.jobform-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.jobform-input-group label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+.jobform-heading-icon {
+  font-size: 24px; /* adjust as needed */
+  margin-left: 10px;
+}
+
+.jobform-input-group input[type="text"],
+.jobform-input-group input[type="email"],
+.jobform-input-group input[type="file"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* SUBMIT BUTTON */
+.jobform-submit-btn {
+  background-color: #393185;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start; /* align icon and text to left */
+  min-width: 200px; /* fixed width for button */
+  transition: all 0.3s ease;
+  align-self: flex-start; /* align button to left inside form */
+  margin-top:0; 
+}
+
+.jobform-submit-btn:hover {
+  background-color: #2e276f;
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .jobform-hero { height: 300px; }
+  .jobform-hero-title { font-size: 36px; }
+  .jobform-breadcrumb { font-size: 14px; }
+  .jobform-input-row { flex-direction: column; gap: 15px; }
+}
+
+@media (max-width: 600px) {
+  .jobform-hero { height: 250px; }
+  .jobform-hero-title { font-size: 28px; }
+  .jobform-breadcrumb { font-size: 12px; }
+  .jobform-container { padding: 25px; }
+  .jobform-heading { font-size: 24px; }
+  .jobform-input-group input { font-size: 15px; padding: 10px; }
+  .jobform-submit-btn { font-size: 16px; padding: 10px 20px; }
+}
+
+@media (max-width: 480px) {
+  .jobform-hero { height: 200px; }
+  .jobform-hero-title { font-size: 24px; }
+  .jobform-breadcrumb { font-size: 11px; }
+  .jobform-container { padding: 15px; }
+  .jobform-heading { font-size: 20px; }
+  .jobform-input-group input { font-size: 14px; padding: 8px; }
+  .jobform-submit-btn { font-size: 14px; padding: 8px 12px; }
+}
+/* FORM INPUTS - APPLY SAME STYLE TO ALL TYPES */
+/* FORM INPUTS - APPLY SAME STYLE TO ALL TYPES */
+.jobform-input-group input[type="text"],
+.jobform-input-group input[type="email"],
+.jobform-input-group input[type="tel"],
+.jobform-input-group input[type="date"],
+.jobform-input-group input[type="number"],
+.jobform-input-group input[type="url"],
+.jobform-input-group textarea,
+.jobform-input-group select {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: #fff;
+  appearance: none; /* safe here because radios are excluded */
+}
+
+
+/* Remove old specific input type styles */
+.jobform-input-group input[type="text"],
+.jobform-input-group input[type="email"],
+.jobform-input-group input[type="file"],
+.jobform-input-group input[type="tel"],
+.jobform-input-group input[type="date"],
+.jobform-input-group input[type="number"],
+.jobform-input-group input[type="url"] {
+  /* all inherit from .jobform-input-group input now */
+}
+/* RADIO BUTTONS - ALL OPTIONS IN ONE ROW */
+.jobform-radio-group {
+  display: flex;          /* row by default */
+  flex-direction: row;    /* ensure row */
+  gap: 20px;              /* spacing between options */
+  flex-wrap: wrap;        /* wrap to next line if needed on small screens */
+  align-items: center;    /* vertically center radio & label */
+}
+
+.jobform-radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  color: #333;
+  margin: 0;              /* remove extra spacing */
+}
+.required-star {
+  color: red;
+  margin-left: 2px;
+  font-weight: 700;
+}
+/* =========================
+   MEDIA QUERIES – JOB FORM (≤900px)
+   ========================= */
+@media (max-width: 900px) {
+
+  /* HERO */
+  .jobform-hero {
+    height: 300px;
+  }
+
+  .jobform-hero-overlay {
+    padding: 30px 40px;
+  }
+
+  .jobform-hero-title {
+    font-size: 36px;
+  }
+
+  .jobform-breadcrumb {
+    font-size: 14px;
+  }
+
+  /* FORM */
+  .jobform-container {
+    padding: 30px;
+  }
+
+  .jobform-input-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .jobform-heading {
+    font-size: 26px;
+  }
+
+  .jobform-input-group label {
+    font-size: 15px;
+  }
+
+  .jobform-input-group input,
+  .jobform-input-group textarea,
+  .jobform-input-group select {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .jobform-submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* =========================
+   MEDIA QUERIES – JOB FORM (≤600px)
+   ========================= */
+@media (max-width: 600px) {
+
+  /* HERO */
+  .jobform-hero {
+    height: 250px;
+  }
+
+  .jobform-hero-overlay {
+    padding: 20px 25px;
+  }
+
+  .jobform-hero-title {
+    font-size: 28px;
+  }
+
+  .jobform-breadcrumb {
+    font-size: 12px;
+  }
+
+  /* FORM */
+  .jobform-container {
+    padding: 20px;
+    box-shadow: none; /* cleaner mobile look */
+  }
+
+  .jobform-heading-wrapper {
+    flex-direction: row;       /* keep heading + icon inline */
+    flex-wrap: wrap;           /* allow wrapping */
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .jobform-heading {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .jobform-input-group input,
+  .jobform-input-group textarea,
+  .jobform-input-group select {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .jobform-radio-group {
+    gap: 12px;
+  }
+
+  /* CAPTCHA */
+  .jobform-input-group .g-recaptcha {
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+
+  .jobform-submit-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+/* =========================
+   MEDIA QUERIES – JOB FORM (≤480px)
+   ========================= */
+@media (max-width: 480px) {
+
+  /* HERO */
+  .jobform-hero {
+    height: 200px;
+  }
+
+  .jobform-hero-title {
+    font-size: 24px;
+  }
+
+  .jobform-breadcrumb {
+    font-size: 11px;
+  }
+
+  /* FORM */
+  .jobform-container {
+    padding: 15px;
+  }
+
+  .jobform-heading {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .jobform-input-group label {
+    font-size: 13px;
+  }
+
+  .jobform-input-group input,
+  .jobform-input-group textarea,
+  .jobform-input-group select {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .jobform-submit-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+/* === FIX ICON POSITION FOR LONG HEADINGS (MOBILE ONLY) === */
+@media (max-width: 600px) {
+  .jobform-heading-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .jobform-heading-icon {
+    font-size: 22px;
+    margin-left: 6px;
+    margin-top: 2px;
+  }
+}
+/* === JOB FORM BREADCRUMB (SAME AS CAREERS) === */
+.jobform-breadcrumb {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.jobform-breadcrumb-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.jobform-breadcrumb-separator {
+  margin: 0 6px;
+  color: #888;
+}
+
+.jobform-breadcrumb-current {
+  color: #888;
+}
+
+/* Remove link underline */
+.jobform-breadcrumb a,
+.jobform-breadcrumb a:visited,
+.jobform-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}
+

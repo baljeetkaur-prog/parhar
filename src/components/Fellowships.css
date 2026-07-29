@@ -1,0 +1,165 @@
+.fellowships-section {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.fellowships-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* GRID LAYOUT */
+.fellowships-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+.fellowships-content {
+  padding-right: 20px;
+}
+
+.fellowships-heading {
+  font-size: 40px;
+  color: #1F2937;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  margin-top:0; 
+}
+
+.fellowships-heading-icon {
+  color: #ce1e3b;
+  font-size: 30px;
+}
+
+
+.fellowships-para {
+  font-size: 16px;
+  color: #555;
+  margin-top: 0;
+  line-height: 1.6;
+  margin-bottom: 22px;
+
+  text-align: justify;
+  text-justify: inter-word;        /* proper word spacing */
+  hyphens: auto;                   /* prevents large gaps */
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+
+/* LIST */
+.fellowships-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fellowships-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 14px;
+  line-height: 1.5;
+  
+}
+
+.fellowships-list svg {
+  color: #393185;
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+/* RIGHT IMAGE */
+.fellowships-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fellowships-image img {
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  object-fit: cover;
+
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1000px) {
+  .fellowships-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .fellowships-content {
+    padding-right: 0;
+  }
+
+  .fellowships-list li {
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .fellowships-section {
+    padding: 50px 20px;
+  }
+
+  .fellowships-heading {
+    font-size: 26px;
+  }
+
+  .fellowships-para {
+    font-size: 15px;
+  }
+
+  .fellowships-image img {
+    max-width: 340px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .fellowships-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .fellowships-content {
+    padding-right: 0;
+  }
+
+  .fellowships-list {
+    max-width: 520px;
+    margin: 0 auto;   /* centers the block */
+  }
+
+  .fellowships-list li {
+    justify-content: flex-start;   /* keeps all ticks aligned */
+    text-align: left;
+  }
+}
+@media (max-width: 576px) {
+  .fellowships-list {
+    max-width: 100%;
+  }
+
+  .fellowships-list li {
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .fellowships-list svg {
+    margin-top: 3px;
+  }
+}
