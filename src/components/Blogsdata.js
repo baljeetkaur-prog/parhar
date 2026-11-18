@@ -1,7 +1,7 @@
 const Blogsdata = [
       {
   id: 1,
-  title: "Robotic Knee Replacement Hospital in Jalandhar | Punjab",
+  title: "Robotic Surgery Hospital in Punjab: Advanced Robotic Knee Replacement at Parhar Hospital",
   slug: "robotic-knee-replacement-hospital-in-jalandhar-punjab",
   category: "services",
   date: "2026-11-18",
