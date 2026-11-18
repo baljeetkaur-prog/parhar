@@ -1,0 +1,708 @@
+/* =========================
+   HERO
+   ========================= */
+.ga-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top;
+}
+
+.ga-hero-overlay {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.ga-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.ga-breadcrumb {
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: 500; 
+}
+
+.ga-bc-home {
+  color: #000;
+  cursor: pointer;
+}
+
+.ga-bc-sep {
+  margin: 0 8px;
+  color: #888;
+}
+
+.ga-bc-current {
+  color: #6b7280;
+}
+
+/* =========================
+   TOPBAR / TABS
+   ========================= */
+.main_gallery-tabs-wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; /* pull tabs slightly over hero bottom */
+}
+
+.gallery-topbar {
+  padding: 10px 0;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.gallery-tabs {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab {
+  position: relative; /* needed for ::after */
+  background: none;
+  border: 1px solid transparent; /* default border */
+  font-size: 18px;
+  padding: 8px 14px;
+  cursor: pointer;
+  color: #444;
+  font-weight: 600;
+  overflow: hidden; /* hide pseudo-element overflow */
+}
+.tab::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* start off to the left */
+  width: 100%;
+  height: 100%;
+  background: #393185;
+  z-index: 0;
+  transition: left 0.6s ease; /* slow smooth animation */
+}
+.tab.active {
+  border: 2px solid #393185;
+  color: #fff;
+}
+.tab.active::after {
+  left: 0; /* move fill from left to cover */
+}
+
+/* Make text appear above pseudo-element */
+.tab span {
+  position: relative;
+  z-index: 1;
+}
+/* ============ MAIN GALLERY PAGE GRID ============ */
+.main_gallery-section {
+  padding: 30px 20px 60px; /* more top padding to separate from tabs */
+  background: #fff;
+}
+
+.main_gallery-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main_gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.main_gallery-box {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_gallery-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease-in-out;
+}
+.main_gallery-box:hover img {
+  transform: scale(1.1); /* zoom in image only */
+  cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 992px) {
+  .main_gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .main_gallery-box {
+    height: 220px;
+  }
+
+  .main_gallery-tabs-wrapper {
+    margin-top: -20px; /* smaller pull on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .main_gallery-section {
+    padding-top: 80px;
+  }
+
+  .main_gallery-box {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_gallery-box {
+    height: 150px;
+  }
+
+  .gallery-tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+/* Fade effect for tab change */
+.main_gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  opacity: 1;
+  transition: opacity 0.6s ease; /* smooth transition when images change */
+}
+
+.main_gallery-grid.fade-out {
+  opacity: 0; /* fade-out old images */
+}
+/* Image modal */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.image-modal img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10000;
+  transition: color 0.3s ease;
+}
+/* =========================
+   MOBILE SCREENS ≤1100px
+========================= */
+@media (max-width: 1100px) {
+  .main_gallery-container {
+    padding: 0 20px;
+  }
+
+  .main_gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+}
+
+/* =========================
+   TABLET / SMALL SCREENS ≤900px
+========================= */
+@media (max-width: 900px) {
+  /* HERO */
+  .ga-hero {
+    height: 250px;
+  }
+
+  .ga-hero-overlay {
+    padding: 25px 30px;
+  }
+
+  .ga-title {
+    font-size: 32px;
+  }
+
+  .ga-breadcrumb {
+    font-size: 14px;
+  }
+
+  /* Tabs */
+  .gallery-tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* Gallery grid */
+  .main_gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .main_gallery-box {
+    height: 180px;
+  }
+}
+
+/* =========================
+   MOBILE SCREENS ≤600px
+========================= */
+@media (max-width: 600px) {
+  /* HERO */
+  .ga-hero {
+    height: 200px;
+  }
+
+  .ga-hero-overlay {
+    padding: 15px 20px;
+  }
+
+  .ga-title {
+    font-size: 26px;
+  }
+
+  .ga-breadcrumb {
+    font-size: 12px;
+  }
+
+  /* Tabs */
+  .gallery-tabs {
+    gap: 6px;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* Gallery grid */
+  .main_gallery-grid {
+    grid-template-columns: 1fr; /* stack single column */
+    gap: 12px;
+  }
+
+  .main_gallery-box {
+    height: 150px;
+  }
+
+  /* Modal */
+  .image-modal img {
+    max-width: 90%;
+    max-height: 70%;
+  }
+
+  .modal-close {
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL SCREENS ≤480px
+========================= */
+@media (max-width: 480px) {
+  .ga-hero {
+    height: 180px;
+  }
+
+  .ga-hero-overlay {
+    padding: 12px 15px;
+  }
+
+  .ga-title {
+    font-size: 22px;
+  }
+
+  .ga-breadcrumb {
+    font-size: 11px;
+  }
+
+  .tab {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .main_gallery-box {
+    height: 120px;
+  }
+
+  .main_gallery-grid {
+    gap: 10px;
+  }
+}
+/* =========================
+   MOBILE SCREENS ≤600px
+========================= */
+@media (max-width: 600px) {
+  /* HERO */
+  .ga-hero {
+    height: 200px;
+  }
+
+  .ga-hero-overlay {
+    padding: 15px 20px;
+  }
+
+  .ga-title {
+    font-size: 26px;
+  }
+
+  .ga-breadcrumb {
+    font-size: 12px;
+  }
+
+  /* Tabs */
+  .gallery-tabs {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main_gallery-tabs-wrapper {
+    margin-top: 15px;  /* move tab bar slightly down */
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* Gallery grid */
+  .main_gallery-grid {
+    grid-template-columns: 1fr; /* stack single column */
+    gap: 12px;
+  }
+
+  .main_gallery-box {
+    height: 150px;
+  }
+
+  /* Modal */
+  .image-modal img {
+    max-width: 90%;
+    max-height: 70%;
+  }
+
+  .modal-close {
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL SCREENS ≤480px
+========================= */
+@media (max-width: 480px) {
+  .main_gallery-tabs-wrapper {
+    margin-top: 10px; /* slightly more spacing on very small screens */
+  }
+
+  .ga-hero {
+    height: 180px;
+  }
+
+  .ga-hero-overlay {
+    padding: 12px 15px;
+  }
+
+  .ga-title {
+    font-size: 22px;
+  }
+
+  .ga-breadcrumb {
+    font-size: 11px;
+  }
+
+  .tab {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .main_gallery-box {
+    height: 120px;
+  }
+
+  .main_gallery-grid {
+    gap: 10px;
+  }
+}
+/* =========================
+   MOBILE SCREENS ≤600px
+========================= */
+@media (max-width: 600px) {
+  /* HERO */
+  .ga-hero {
+    height: 200px;
+  }
+
+  .ga-hero-overlay {
+    padding: 15px 20px;
+  }
+
+  .ga-title {
+    font-size: 26px;
+  }
+
+  .ga-breadcrumb {
+    font-size: 12px;
+  }
+
+  /* Tabs */
+  .gallery-tabs {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main_gallery-tabs-wrapper {
+    margin-top: 15px;  /* move tab bar slightly down */
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* Gallery grid adjustments for mobile */
+  .main_gallery-section {
+    padding-top: 20px; /* shift gallery slightly up */
+  }
+
+  .main_gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* two columns on mobile */
+    gap: 12px;
+  }
+
+  .main_gallery-box {
+    height: 150px;
+  }
+
+  /* Modal */
+  .image-modal img {
+    max-width: 90%;
+    max-height: 70%;
+  }
+
+  .modal-close {
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL SCREENS ≤480px
+========================= */
+@media (max-width: 480px) {
+  .main_gallery-tabs-wrapper {
+    margin-top: 10px; /* slightly more spacing on very small screens */
+  }
+
+  .main_gallery-section {
+    padding-top: 15px; /* shift gallery a little more up */
+  }
+
+  .ga-hero {
+    height: 180px;
+  }
+
+  .ga-hero-overlay {
+    padding: 12px 15px;
+  }
+
+  .ga-title {
+    font-size: 22px;
+  }
+
+  .ga-breadcrumb {
+    font-size: 11px;
+  }
+
+  .tab {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .main_gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* two columns on very small screens too */
+    gap: 10px;
+  }
+
+  .main_gallery-box {
+    height: 120px;
+  }
+}
+/* =========================
+   MOBILE SCREENS ≤600px
+========================= */
+@media (max-width: 600px) {
+  /* Gallery grid adjustments for mobile */
+  .main_gallery-section {
+    padding: 20px 10px; /* reduce left & right padding, keep some top padding */
+  }
+
+  .main_gallery-container {
+    padding: 0 5px; /* container padding reduced */
+  }
+
+  .main_gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* two columns */
+    gap: 12px;
+  }
+
+  .main_gallery-box {
+    height: 200px; /* increase height of images */
+  }
+}
+
+/* =========================
+   EXTRA SMALL SCREENS ≤480px
+========================= */
+@media (max-width: 480px) {
+  .main_gallery-section {
+    padding: 15px 8px; /* reduce side padding even more */
+  }
+
+  .main_gallery-container {
+    padding: 0 5px;
+  }
+
+  .main_gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* two columns */
+    gap: 10px;
+  }
+
+  .main_gallery-box {
+    height: 180px; /* increase height of images */
+  }
+}
+/* =========================
+   MOBILE SCREENS ≤600px
+========================= */
+@media (max-width: 600px) {
+  .main_gallery-section {
+    padding: 20px 10px 70px; /* top | sides | bottom increased */
+  }
+
+  .main_gallery-container {
+    padding: 0 5px; /* container padding reduced */
+  }
+
+  .main_gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* two columns */
+    gap: 12px;
+  }
+
+  .main_gallery-box {
+    height: 200px; /* increase height of images */
+  }
+}
+
+/* =========================
+   EXTRA SMALL SCREENS ≤480px
+========================= */
+@media (max-width: 480px) {
+  .main_gallery-section {
+    padding: 15px 8px 70px; /* top | sides | bottom increased */
+  }
+
+  .main_gallery-container {
+    padding: 0 5px;
+  }
+
+  .main_gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* two columns */
+    gap: 10px;
+  }
+
+  .main_gallery-box {
+    height: 180px; /* increase height of images */
+  }
+}
+/* Video wrapper to position play icon */
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.video-wrapper video {
+  width: 100%;
+  display: block;
+  border-radius: 8px; /* optional, same as image corners */
+}
+
+/* Play icon overlay */
+.video-wrapper .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6); /* round black glass */
+  color: white;
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* so click goes to parent */
+}
+.main_gallery-grid-wrapper {
+  height: 1200px; /* or whatever max height fits your biggest tab */
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+}
+.main_gallery-grid-wrapper.fade-out {
+  opacity: 0;
+}
+.ga-breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ga-breadcrumb a:hover,
+.ga-breadcrumb a:visited,
+.ga-breadcrumb a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+

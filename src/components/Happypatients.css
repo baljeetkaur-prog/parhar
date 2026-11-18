@@ -1,0 +1,260 @@
+.happy-section {
+  background-color: #ffffff;
+  padding: 50px 20px;
+}
+
+.happy-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Scroll Wrapper */
+.scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.review-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollReviews 25s linear infinite;
+}
+
+/* Pause animation on hover */
+.scroll-wrapper:hover .review-track {
+  animation-play-state: paused;
+}
+
+/* === Uniform Cards === */
+.review-card {
+  width: 400px; /* fixed consistent width */
+  height: 220px; /* fixed consistent height */
+  border: 1px solid #000000;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.review-card:hover{
+  cursor: pointer;
+}
+
+/* Keep all images uniform inside box */
+.review-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps image proportionally centered */
+  background-color: #fff;
+}
+
+/* Continuous Scroll Animation */
+@keyframes scrollReviews {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .review-card {
+    width: 160px;
+    height: 160px;
+  }
+
+  .happy-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* === MODAL === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  max-width: 90%;
+  max-height: 90%;
+  animation: popIn 0.3s ease;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  background: #000;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* ===== Mobile adjustments for Happypatients ===== */
+@media (max-width: 768px) {
+  .happy-section {
+    padding: 20px 15px; /* slightly reduced padding */
+  }
+
+  /* Heading adjustments like Aboutsection */
+  .happy-section h1 {
+    font-size: 26px; /* smaller font */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .happy-section h1 svg {
+    font-size: 26px; /* icon size same as text */
+    margin-left: 5px;
+    color: #ce1e3b;
+  }
+
+  /* Scroll cards adjustments */
+  .review-card {
+    width: 250px;
+    height: 200px;
+  }
+
+  .review-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .scroll-wrapper {
+    overflow-x: auto; /* allow horizontal scroll if needed */
+  }
+
+  .review-track {
+    gap: 10px;
+  }
+}
+/* Extra Small Screens (max-width: 480px) */
+/* Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .happy-section {
+    padding: 15px 10px;
+  }
+
+  /* Heading adjustments */
+  .happy-section h1 {
+    font-size: 20px;
+    text-align: center;
+    gap: 5px;
+    white-space: normal;
+    flex-wrap: wrap;
+  }
+
+  .happy-section h1 svg {
+    font-size: 20px;
+    margin-left: 3px;
+    color: #ce1e3b;
+  }
+
+  /* Scroll wrapper: enable horizontal swipe scrolling */
+  .scroll-wrapper {
+    overflow-x: auto;             /* enable scrolling */
+    -webkit-overflow-scrolling: touch; /* smooth momentum on iOS */
+    padding-bottom: 10px;         /* optional: space for scrollbar */
+  }
+
+  /* Review track: remove auto animation */
+ .review-track {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+    /* animation: none; */  /* REMOVE THIS LINE */
+    animation: scrollReviews 25s linear infinite; /* re-enable */
+  }
+  /* Review cards: smaller size for tiny screens */
+  .review-card {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  }
+
+  .review-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Modal adjustments */
+  .modal-content {
+    max-width: 95%;
+    max-height: 90%;
+    padding: 8px;
+  }
+
+  .modal-content img {
+    max-height: 70vh;
+  }
+
+  .close-btn {
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    top: -12px;
+    right: -8px;
+  }
+}
+
+

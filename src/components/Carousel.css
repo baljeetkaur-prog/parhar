@@ -1,0 +1,1278 @@
+/* ===== Carousel Section ===== */
+.carousel {
+  height: 600px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+
+/* Center content vertically */
+.carousel-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between; /* space between text and optional image/profile */
+  align-items: center;
+  max-width: 1200px; /* limit content width */
+  margin: 0 auto; /* center content */
+  padding: 0 20px; /* some side padding */
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+/* Single column layout */
+.single-column {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Overlay text */
+.carousel-left.overlay-text {
+  max-width: 800px;
+  color: #fff;
+  margin-top: -100px;
+}
+
+/* ===== Slide Text ===== */
+.slide-title {
+  color: #393185;
+  font-size: 25px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.slide-heading {
+  font-size: 70px;
+  color: #000;
+  margin: 5px 0 5px 0;
+  line-height: 1.1;
+  font-weight: 700;
+  white-space: pre-line; /* for \n line breaks */
+}
+
+.slide-text {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* NABH Logo */
+.nabh-logo {
+  position: absolute;
+  top: 50px;
+  right: 500px;
+  width: 150px;
+  height: 150px;
+  z-index: 5;
+}
+
+.nabh-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: rotateLogo 60s linear infinite; /* very slow rotation */
+}
+
+/* Keyframes for rotation */
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== Buttons ===== */
+.header-enquiry-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #393185;
+  color: #fff;
+  width: 200px;
+  padding: 13px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.header-enquiry-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== Carousel Arrows ===== */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
+  font-size: 20px;
+  padding: 10px 12px;
+  border-radius: 50%;
+  color: #000;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-arrow.left {
+  left: 20px;
+}
+
+.carousel-arrow.right {
+  right: 20px;
+}
+
+/* ===== Profile & Tick Box (Slide 4) ===== */
+.carousel-right.absolute-right {
+  position: absolute;
+  top: 70%;
+  right: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  z-index: 5;
+  transform: translateY(-50%);
+}
+
+/* Tick Box */
+.tick-box {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top:-150px; 
+  margin-right: 200px; 
+  gap: 10px;
+  flex-shrink: 0;
+  animation: floatUpDown 3s ease-in-out infinite alternate;
+}
+
+.tick-circle {
+  background-color: #393185;
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Profile Box */
+.profile-box {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 180px;
+  display: flex;
+  margin-right: 50px; 
+  flex-direction: column;
+  align-items: center;
+    margin-top:-170px; 
+  gap: 10px;
+  text-align: center;
+  animation: floatUpDown 3s ease-in-out infinite alternate;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-box h3 {
+  font-size: 15px;
+  color: #1F2937;
+  margin: 0;
+}
+
+.profile-box p {
+  font-size: 12px;
+  color: #777;
+  font-weight: 500;
+  margin: 0;
+}
+
+.book-btn {
+  margin-top: auto;
+  background-color: #E5E7EB;
+  color: #393185;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  opacity: 0.9;
+}
+
+/* Floating Animation */
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .carousel {
+    height: auto;
+    padding: 60px 10px;
+  }
+
+  .carousel-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .carousel-left.overlay-text {
+    max-width: 90%;
+    margin-top: 0;
+  }
+
+  .slide-heading {
+    font-size: 32px;
+  }
+
+  .slide-title {
+    font-size: 18px;
+  }
+
+  .slide-text {
+    font-size: 14px;
+  }
+
+  .header-enquiry-btn {
+    width: 130px;
+    padding: 9px 0;
+    font-size: 14px;
+  }
+
+  .nabh-logo {
+    top: 10px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .carousel-right.absolute-right {
+    flex-direction: column;
+    bottom: 20px;
+    right: 20px;
+    transform: none;
+    gap: 10px;
+  }
+
+  .profile-box {
+    width: 110px;
+    padding: 6px;
+  }
+
+  .profile-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile-box h3 { font-size: 12px; }
+  .profile-box p { font-size: 10px; }
+  .book-btn { font-size: 10px; padding: 4px 8px; }
+
+  .tick-box {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 400px;
+    padding: 15px;
+  }
+
+  .slide-heading {
+    font-size: 24px;
+  }
+
+  .slide-title {
+    font-size: 14px;
+  }
+
+  .slide-text {
+    font-size: 11px;
+  }
+
+  .header-enquiry-btn {
+    width: 100px;
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+
+  .nabh-logo {
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    right: 200px;
+  }
+
+  .profile-box {
+    width: 90px;
+    padding: 4px;
+  }
+
+  .profile-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .book-btn {
+    font-size: 8px;
+    padding: 3px 6px;
+  }
+
+  .tick-box {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+}
+
+/* ===== Small tweaks ===== */
+.carousel-left a { text-decoration: none; color: inherit; }
+
+/* ===== Mobile Fix: Show full image without white space ===== */
+@media (max-width: 900px) {
+  .carousel {
+    height: auto; 
+    min-height: 400px; /* adjust as needed for image */
+    padding: 0; /* remove top padding causing white space */
+    background-size: fill; /* fill container, avoid white space */
+    background-position: center center; /* start image from top */
+    background-repeat: no-repeat;
+  }
+
+  .carousel-container {
+    flex-direction: row; /* keep left/right side-by-side */
+    justify-content: space-between;
+    align-items: flex-start; /* align to top */
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .carousel-left.overlay-text {
+    max-width: 50%; /* reduce width */
+    margin-top: 20px; /* small margin from top */
+  }
+
+  .carousel-right.absolute-right {
+    top: 20px; /* move closer to top */
+    right: 10px;
+    transform: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Scale down text */
+  .slide-heading { font-size: 28px; line-height: 1.1; }
+  .slide-title { font-size: 16px; }
+  .slide-text { font-size: 12px; line-height: 1.4; }
+
+  /* Scale down buttons */
+  .header-enquiry-btn { width: 120px; padding: 8px 6px; font-size: 12px; }
+  .book-btn { font-size: 10px; padding: 4px 6px; }
+
+  /* Scale down NABH logo */
+  .nabh-logo { width: 60px; height: 60px; top: 10px; right: 10px; }
+
+  /* Scale down profile box */
+  .profile-box { width: 90px; padding: 4px; }
+  .profile-avatar { width: 40px; height: 40px; }
+  .profile-box h3 { font-size: 10px; }
+  .profile-box p { font-size: 8px; }
+
+  /* Tick box */
+  .tick-box { font-size: 10px; padding: 4px 6px; }
+}
+/* ===== Extra Small Screens: ≤480px ===== */
+@media (max-width: 480px) {
+  .carousel {
+    height: auto;
+    min-height: 300px; /* adjust for very small screens */
+    padding: 0; /* remove extra space */
+    background-size: cover; /* fill container */
+    background-position: center top; /* start image from top */
+    background-repeat: no-repeat;
+  }
+
+  .carousel-container {
+    flex-direction: row; /* keep left/right side-by-side */
+    justify-content: space-between;
+    align-items: flex-start; /* align content at top */
+    gap: 8px;
+  }
+
+  .carousel-left.overlay-text {
+    max-width: 55%; /* smaller width for extra small screens */
+    margin-top: 10px; /* small top spacing */
+    color: #fff;
+  }
+
+  .carousel-right.absolute-right {
+    top: 10px; /* closer to top */
+    right: 5px;
+    transform: none;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  /* Scale down text */
+  .slide-heading { font-size: 22px; line-height: 1.1; }
+  .slide-title { font-size: 14px; }
+  .slide-text { font-size: 10px; line-height: 1.3; }
+
+  /* Scale down buttons */
+  .header-enquiry-btn { width: 100px; padding: 6px 4px; font-size: 10px; }
+  .book-btn { font-size: 8px; padding: 3px 6px; }
+
+  /* Scale down NABH logo */
+  .nabh-logo { width: 50px; height: 50px; top: 5px; right: 5px; }
+
+  /* Scale down profile box */
+  .profile-box { width: 80px; padding: 3px; }
+  .profile-avatar { width: 30px; height: 30px; }
+  .profile-box h3 { font-size: 8px; }
+  .profile-box p { font-size: 7px; }
+
+  /* Tick box */
+  .tick-box { font-size: 8px; padding: 3px 4px; }
+}
+/* Dots */
+/* Make carousel dots appear above all images */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 9999 !important;   /* Highest priority */
+}
+
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+  width: 12px;
+  height: 12px;
+  background-color: #393185;
+}
+
+/* Hide arrows and show dots in mobile */
+@media (max-width: 900px) {
+  .carousel-arrow {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .carousel-dots {
+    display: flex;
+  }
+}
+
+/* Hide dots in desktop */
+@media (min-width: 901px) {
+  .carousel-dots {
+    display: none;
+  }
+}
+/* Shift background RIGHT only for slide 0 on mobile */
+@media (max-width: 900px) {
+  .carousel-slide-0 {
+    background-position: 70% center !important;
+  }
+}
+@media (max-width: 900px) {
+  /* Shift background properly */
+  .carousel-slide-0 {
+    background-position: 70% center !important;
+  }
+
+  /* Shift content slightly right (you already did this) */
+  .slide0-content {
+    padding-left: 20px !important;
+    margin-top: 50px !important; 
+  }
+
+  /* First Slide – Title */
+  .carousel-slide-0 .slide-title {
+    font-size: 15px !important;
+    text-align: left;
+  }
+
+  /* First Slide – Heading */
+  .carousel-slide-0 .slide-heading {
+    font-size: 25px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 2px;
+    text-align: left;
+  }
+
+  /* First Slide – Paragraph */
+  .carousel-slide-0 .slide-text {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    text-align: left;
+  }
+
+  /* First Slide – Button */
+  .carousel-slide-0 .header-enquiry-btn {
+    width: 170px !important;
+    padding: 10px 5px!important;
+    font-size: 14px !important;
+  }
+
+  /* First Slide – NABH Logo */
+  .carousel-slide-0 .nabh-logo {
+    width: 70px !important;
+    height: 70px !important;
+    top: 15px !important;
+    right: 100px !important;
+  }
+}
+
+/* EXTRA SMALL (≤480px) */
+@media (max-width: 480px) {
+  .slide0-content {
+    padding-left: 20px !important;
+    margin-top:10px !important;
+  }
+
+  .carousel-slide-0 .slide-title {
+    font-size: 14px !important;
+  }
+
+  .carousel-slide-0 .slide-heading {
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+  }
+
+  .carousel-slide-0 .slide-text {
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+  }
+
+  .carousel-slide-0 .header-enquiry-btn {
+    width: 140px !important;
+    padding: 7px 5px !important;
+    font-size: 11px !important;
+  }
+
+  .carousel-slide-0 .nabh-logo {
+    width: 55px !important;
+    height: 55px !important;
+    top: 8px !important;
+    right: 60px !important;
+  }
+}
+/* ========================= */
+/* SECOND SLIDE (≤900px)     */
+/* ========================= */
+@media (max-width: 900px) {
+
+  /* Shift background properly */
+  .carousel-slide-1 {
+    background-position: 40% center !important;
+  }
+
+  /* Shift content slightly */
+  .slide1-content {
+    padding-left: 20px !important;
+    margin-top: 45px !important;
+  }
+
+  /* Title */
+  .carousel-slide-1 .slide-title {
+    font-size: 15px !important;
+    text-align: left;
+  }
+
+  /* Heading */
+  .carousel-slide-1 .slide-heading {
+    font-size: 25px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 5px;
+    text-align: left;
+    white-space: pre-line;
+  }
+
+  /* Paragraph */
+  .carousel-slide-1 .slide-text {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    text-align: left;
+  }
+
+  /* Button */
+  .carousel-slide-1 .header-enquiry-btn {
+    width: 120px !important;
+    padding: 10px 5px !important;
+    font-size: 14px !important;
+  }
+}
+/* ========================= */
+/* SECOND SLIDE (≤480px)     */
+/* ========================= */
+@media (max-width: 480px) {
+
+  .slide1-content {
+    padding-left: 20px !important;
+    margin-top: 10px !important;
+  }
+
+  .carousel-slide-1 .slide-title {
+    font-size: 14px !important;
+  }
+
+  .carousel-slide-1 .slide-heading {
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+    white-space: pre-line;
+  }
+
+  .carousel-slide-1 .slide-text {
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+  }
+
+  .carousel-slide-1 .header-enquiry-btn {
+    width: 100px !important;
+    padding: 7px 5px !important;
+    font-size: 11px !important;
+  }
+}
+/* ========================= */
+/* THIRD SLIDE (≤900px)      */
+/* ========================= */
+@media (max-width: 900px) {
+
+  /* Background alignment */
+  .carousel-slide-2 {
+    background-position: 100% center !important;
+  }
+
+  /* Content spacing */
+  .slide2-content {
+    padding-left: 20px !important;
+    margin-top: 45px !important;
+  }
+
+  /* Title */
+  .carousel-slide-2 .slide-title {
+    font-size: 15px !important;
+    text-align: left;
+  }
+
+  /* Heading */
+  .carousel-slide-2 .slide-heading {
+    font-size: 25px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  /* Paragraph */
+  .carousel-slide-2 .slide-text {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    text-align: left;
+  }
+
+  /* Button */
+  .carousel-slide-2 .header-enquiry-btn {
+    width: 120px !important;
+    padding: 10px 5px !important;
+    font-size: 14px !important;
+  }
+}
+/* ========================= */
+/* THIRD SLIDE (≤480px)      */
+/* ========================= */
+@media (max-width: 480px) {
+
+  .slide2-content {
+    padding-left: 20px !important;
+    margin-top: 20px !important;
+  }
+
+  .carousel-slide-2 .slide-title {
+    font-size: 14px !important;
+  }
+
+  .carousel-slide-2 .slide-heading {
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+  }
+
+  .carousel-slide-2 .slide-text {
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+  }
+
+  .carousel-slide-2 .header-enquiry-btn {
+    width: 100px !important;
+    padding: 7px 5px !important;
+    font-size: 11px !important;
+  }
+}
+/* ============================= */
+/* MOBILE FOG FOR SLIDE 3 ONLY  */
+/* ============================= */
+@media (max-width: 900px) {
+
+  .carousel-slide-2 {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-slide-2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 70%;
+    background: linear-gradient(
+      to right,
+      #f2f6f6 0%,
+      rgba(242, 246, 246, 0.8) 40%,
+      rgba(242, 246, 246, 0.3) 75%,
+      rgba(242, 246, 246, 0) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* keep text above fog */
+  .carousel-slide-2 .overlay-text {
+    position: relative;
+    z-index: 2;
+  }
+}
+@media (max-width: 480px) {
+  .carousel-slide-2::before {
+    width: 85%;
+    opacity: 0.9;
+  }
+}
+/* ========================= */
+/* FOURTH SLIDE (≤900px)     */
+/* ========================= */
+@media (max-width: 900px) {
+
+  /* Background alignment */
+  .carousel-slide-3 {
+    background-position: 65% center !important;
+  }
+
+  /* Content spacing */
+  .slide3-content {
+    padding-left: 20px !important;
+    margin-top: 45px !important;
+  }
+
+  /* Title */
+  .carousel-slide-3 .slide-title {
+    font-size: 15px !important;
+    text-align: left;
+  }
+
+  /* Heading */
+  .carousel-slide-3 .slide-heading {
+    font-size: 25px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 5px;
+    text-align: left;
+    white-space: pre-line;
+  }
+
+  /* Paragraph */
+  .carousel-slide-3 .slide-text {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    text-align: left;
+  }
+
+  /* Button */
+  .carousel-slide-3 .header-enquiry-btn {
+    width: 130px !important;
+    padding: 10px 5px !important;
+    font-size: 14px !important;
+  }
+
+  /* Hide profile & tick box on mobile */
+  .carousel-slide-3 .carousel-right {
+    display: none !important;
+  }
+}
+
+/* ========================= */
+/* FOURTH SLIDE (≤480px)     */
+/* ========================= */
+@media (max-width: 480px) {
+
+  .slide3-content {
+    padding-left: 20px !important;
+    margin-top: 10px !important;
+  }
+
+  .carousel-slide-3 .slide-title {
+    font-size: 14px !important;
+  }
+
+  .carousel-slide-3 .slide-heading {
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+    white-space: pre-line;
+  }
+
+  .carousel-slide-3 .slide-text {
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+  }
+
+  .carousel-slide-3 .header-enquiry-btn {
+    width: 105px !important;
+    padding: 7px 5px !important;
+    font-size: 11px !important;
+    margin-top:-10px; 
+  }
+
+  /* Hide profile & tick box */
+  .carousel-slide-3 .carousel-right {
+    display: none !important;
+  }
+}
+/* Fade in/out animation for desktop */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Default (desktop) */
+.slide-title {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #393185;
+}
+
+.title-border {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: #ce1e3b;
+  margin-right: 10px;
+}
+
+/* Tablets (≤900px) */
+@media (max-width: 900px) {
+  .slide-title {
+    font-size: 20px; /* slightly smaller */
+  }
+
+  .title-border {
+    width: 25px; /* shorter line */
+    height: 2.5px;
+    margin-right: 8px;
+  }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .slide-title {
+    font-size: 16px; /* smaller text */
+  }
+
+  .title-border {
+  display: none; 
+  }
+}
+/* Large screens (desktop) */
+@media (min-width: 901px) {
+  .carousel {
+    background-size: cover; /* fill container, crop extra */
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+.machine-image-box {
+  position: absolute;
+  right: 300px;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.robotic-machine {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
+}
+@media (max-width: 768px) {
+  .machine-image-box {
+    right: 15px;
+    top: 70px;
+    bottom: 25px;
+    transform: none;
+  }
+
+  .robotic-machine {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .robotic-machine {
+    width: 150px;
+  }
+}
+/* FORCE SHIFT NABH LOGO ON ALL MOBILE SCREENS */
+@media (max-width: 900px) {
+  section.carousel .nabh-logo {
+    right: 150px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section.carousel .nabh-logo {
+    right: 100px !important;
+  }
+}
+.certificate-image-box {
+  position: absolute; /* absolute positioning for overlay */
+  right: 550px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate-image {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0px 8px 18px rgba(0,0,0,0.2));
+  animation: floatUp 1.5s ease-out;
+}
+
+.certificate-medal {
+  position: absolute;
+  bottom: -50px;
+  right: -70px;
+  width: 150px;
+  height: auto;
+  z-index: 5;
+  filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.2));
+  animation: medalPop 0.6s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .certificate-image-box {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .certificate-image { width: 180px; }
+  .certificate-medal { width: 100px; bottom: -20px; right: -20px; }
+}
+
+@media (max-width: 480px) {
+  .certificate-image-box {
+    right:20%;
+    transform: translate(50%, -30%);
+    top: auto;
+    bottom: -10px;
+  }
+  .certificate-image { width: 140px; }
+  .certificate-medal { width: 55px; bottom: -15px; right: -15px; }
+}
+.carousel-center-circle {
+  position: absolute;
+  top: 30%;
+  left: 73%;
+  transform: translate(-50%, -50%);
+  z-index: 20; /* higher than text/profile boxes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Outer white circle */
+.carousel-center-circle .outer-circle {
+  width: 270px;   /* outer circle size */
+  height: 270px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    position: relative;
+    top:50px; 
+    right: 5px; 
+  padding: 1px;  /* space for inner circle */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Inner red circle */
+.carousel-center-circle .inner-circle {
+  width: 250px;
+  height: 250px;
+  background-color: #ce1e3b;
+  border-radius: 50%;
+}
+
+/* Image overlay outside the circles */
+.carousel-center-circle .circle-overlay-image {
+  position: absolute;
+  top: -30px;   /* stays the same */
+  left: 45%;
+  transform: translateX(-50%);
+  width: 420px;
+  height: auto;
+  z-index: 25;
+  pointer-events: none;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-center-circle {
+    left: 78%;   /* shift right from the default 73% */
+  }
+
+  .carousel-center-circle .outer-circle { width: 160px; height: 160px; padding: 6px; }
+  .carousel-center-circle .inner-circle { width: 150px; height: 150px; }
+  .carousel-center-circle .circle-overlay-image { width: 250px; top: 10px;}
+}
+
+@media (max-width: 480px) {
+  .carousel-center-circle {
+    left: 80%;   /* push a bit more right on very small screens */
+  }
+
+  .carousel-center-circle .outer-circle { width: 140px; height: 140px; padding: 4px; }
+  .carousel-center-circle .inner-circle { width: 130px; height: 130px; }
+  .carousel-center-circle .circle-overlay-image { width: 200px; top: 10px;}
+}
+
+/* Attach tick-box + profile-box on top of center circle */
+.carousel-overlay-profile {
+  position: absolute;
+  top: 50%;         /* center vertically */
+  left: 50%;        /* center horizontally */
+  transform: translate(-50%, -50%);
+  width: 270px;     /* same width as outer circle */
+  height: 270px;
+  pointer-events: auto; 
+  z-index: 30;      /* above circle + above doctor */
+}
+
+/* Position individual items inside circle */
+.carousel-overlay-profile .tick-box {
+  position: absolute;
+  bottom: 80px;
+  right: -80px;
+  margin: 0;
+  animation: floatUpDown 3s ease-in-out infinite alternate;
+}
+
+.carousel-overlay-profile .profile-box {
+  position: absolute;
+  bottom: -50px;
+right: -500px;
+  margin: 0;
+  animation: floatUpDown 3s ease-in-out infinite alternate;
+}
+/* Hide overlay on mobile */
+@media (max-width: 768px) {
+  .carousel-overlay-profile {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-overlay-profile .tick-box,
+  .carousel-overlay-profile .profile-box {
+    display: none;
+  }
+}
+/* Extra-large screens (big desktops, TVs, 1600px+) */
+@media (min-width: 1600px) {
+  .carousel-overlay-profile .tick-box {
+    right: -120px;   /* move more right to stay aligned */
+    bottom: 90px;
+  }
+
+  .carousel-overlay-profile .profile-box {
+    right: -550px;   /* move more right to stay on right of circle */
+    bottom: -40px;
+  }
+}
+@media (min-width: 1900px) {
+  .carousel-overlay-profile .tick-box {
+    right: -150px;
+  }
+
+  .carousel-overlay-profile .profile-box {
+    right: -600px;
+  }
+}
+/* For large screens – push circle + image right */
+@media (min-width: 1600px) {
+  .carousel-center-circle {
+    left: 78%;
+  }
+}
+
+@media (min-width: 1900px) {
+  .carousel-center-circle {
+    left: 82%;
+  }
+}
+.carousel-overlay-profile {
+  left: 50%;  /* SAME as .carousel-center-circle */
+  transform: translate(-50%, -50%);
+}
+/* Tablet */
+@media (max-width: 768px) {
+  .carousel-overlay-profile {
+    left: 50%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .carousel-overlay-profile {
+    left: 50%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .carousel-overlay-profile {
+    left: 55%;
+  }
+}
+
+@media (min-width: 1900px) {
+  .carousel-overlay-profile {
+    left: 57%;
+  }
+}
+
+/* NEW — Ultra-wide screens */
+@media (min-width: 2200px) {
+  .carousel-overlay-profile {
+    left: 63%;
+  }
+}
+
+@media (min-width: 2600px) {
+  .carousel-overlay-profile {
+    left: 60%;
+  }
+}
+
+@media (min-width: 3000px) {
+  .carousel-overlay-profile {
+    left: 69%;
+  }
+}
+
+@media (min-width: 3500px) {
+  .carousel-overlay-profile {
+    left: 70%;
+  }
+}
+
+@media (min-width: 4000px) {
+  .carousel-overlay-profile {
+    left: 74%;
+  }
+}
+
+@media (min-width: 5000px) {
+  .carousel-overlay-profile {
+    left: 70%;
+  }
+}
+
+@media (min-width: 6000px) {
+  .carousel-overlay-profile {
+    left: 75%;
+  }
+}
+/* Hide tick-box + profile-box on tablets (480px–768px) */
+@media (max-width: 768px) {
+  .carousel-overlay-profile .tick-box,
+  .carousel-overlay-profile .profile-box {
+    display: none !important;
+  }
+}
+/* Mobile dots (≤900px) */
+/* Mobile dots (≤900px) */
+@media (max-width: 900px) {
+.carousel-dots .dot {
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.2); /* subtle gray border */
+}
+.carousel-dots .dot.active {
+  background-color: #393185;
+  border: none;
+}
+}

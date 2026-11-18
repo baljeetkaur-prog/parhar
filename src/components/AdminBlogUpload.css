@@ -1,0 +1,116 @@
+/* Admin Blog Upload Container */
+.admin-blog-upload {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #fafafa;
+  padding: 30px;
+  border-radius: 4px; 
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.admin-blog-upload h2 {
+  margin-bottom: 30px;
+  color: #333; 
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Form Labels */
+.admin-blog-upload label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Input and Select Fields */
+.admin-blog-upload input[type="text"],
+.admin-blog-upload select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  margin-top: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-blog-upload input[type="text"]:focus,
+.admin-blog-upload select:focus,
+.admin-blog-upload textarea:focus {
+  outline: none;
+}
+
+/* Toolbar */
+.toolbar {
+  margin: 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.toolbar button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.toolbar button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Textarea */
+.admin-blog-upload textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  margin-top: 6px;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Publish Button */
+.admin-blog-upload button[type="submit"] {
+  margin-top: 5px;
+  padding: 12px 22px;
+  background-color: #393185;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-blog-upload button[type="submit"]:hover {
+  background-color: #1f2266;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .admin-blog-upload {
+    padding: 20px;
+  }
+
+  .toolbar {
+    gap: 4px;
+  }
+
+  .toolbar button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  .admin-blog-upload h2 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,76 @@
+/* Full background */
+.adminlogin-bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center login box */
+.adminlogin-box {
+  width: 380px;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 4px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-bottom: 70px; 
+}
+
+/* Logo */
+.adminlogin-logo {
+  width: 130px;
+  margin-bottom: 20px;
+}
+
+/* Form labels and inputs */
+.adminlogin-label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.adminlogin-input {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  color: #1f2937; /* Keep text color consistent */
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+.adminlogin-input:focus {
+  outline: none; 
+  color: #1f2937; 
+}
+/* Login button */
+.adminlogin-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #393185;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adminlogin-btn:hover {
+  background-color: #ce1e3b;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .adminlogin-box {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
